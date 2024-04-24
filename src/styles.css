@@ -1,3 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fjalla+One&family=Righteous&family=Russo+One&family=Ubuntu+Condensed&family=Zeyada&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.righteous {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .cinzel {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  .ubuntu {
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  .russo {
+    font-family: "Russo One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+.space-line{
+    line-height: 85px;
+}
+.bg_blue_normal{
+  background-color: rgb(63,87,239);
+}
+.bg_blue_transparent{
+  background-color: rgb(34, 61, 241);
+}

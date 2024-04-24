@@ -4,6 +4,7 @@ import { NavBarComponent } from '../../components/nav-bar/nav-bar.component';
 import { HeaderPersonalComponent } from '../../components/header-personal/header-personal.component';
 import { ToolsUsedComponent } from '../../components/tools-used/tools-used.component';
 import { AboutMeComponent } from '../../components/about-me/about-me.component';
+import { ServicesBuyComponent } from '../../components/services-buy/services-buy.component';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ import { AboutMeComponent } from '../../components/about-me/about-me.component';
     NavBarComponent,
     HeaderPersonalComponent,
     ToolsUsedComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ServicesBuyComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

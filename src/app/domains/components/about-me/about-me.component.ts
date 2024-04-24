@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.css'
 })
 export class AboutMeComponent {
-
+  carrera:string="ingeniero en sistemas computacionales";
+  especialidad:string="ingenieria de software";
+  description_personal : string = 'Soy una persona especializada en Ingeniería de Software, con trayectoria en la implementación de soluciones tecnológicas que mejoran la eficiencia de las empresas. He demostrado habilidades excepcionales en el diseño y desarrollo de software, destacando en la resolución efectiva de problemas y la automatización de procesos. contribuyendo así al éxito de los proyectos. Mi compromiso con el aprendizaje continuo me ha permitido mantenerme actualizado con las últimas tendencias y metodologías en el campo, garantizando soluciones innovadoras. Ademas de mi experiencia técnica, soy apasionado por seguir evolucionando profesionalmente';
+  image:string="../../../../assets/images/img7.svg";
 }
