@@ -1,0 +1,10 @@
+<div>
+    <div class="flex gap-10 my-5 place-content-center flex-wrap">
+        <ul class="flex" *ngFor="let item of tools_used">
+            <li class="flex flex-col justify-center items-center bg-slate-100 w-32 rounded shadow-2xl shadow-white  p-4">
+                <img class="w-16" [src]="item.url" alt="">
+                <p class="text-center p-0 mx-auto text-black">{{item.name | uppercase}}</p>
+            </li>
+        </ul>
+    </div>
+</div>
