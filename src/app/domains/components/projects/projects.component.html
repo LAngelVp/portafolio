@@ -1,0 +1,28 @@
+<div class="flex-col mb-10">
+    <div class="">
+        <div>
+            <h2 class="text-4xl righteous text-center md:text-start">
+                Projectos
+            </h2>
+        </div>
+        <ul class="flex flex-col gap-6 my-5 w-11/12 place-content-center mx-auto">
+            <li *ngFor="let item of arrayProjects" class="flex flex-col md:flex-row bg-slate-100 border shadow-2xl rounded-lg hover:scale-105 hover:transition">
+                <img class="w-full md:w-2/4 md:max-h-auto rounded-s-lg" 
+                [src]="item.image" alt="">
+                <div class="flex flex-col place-content-start p-5 gap-5">
+                    <div>
+                        <h4 class="righteous text-3xl capitalize">
+                            {{item.name}}
+                        </h4>
+                        <p class="ubuntu text-xl capitalize">
+                            {{item.enterprise}}
+                        </p>
+                    </div>
+                    <p class="ubuntu_2 text-lg">
+                        {{item.description}}
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

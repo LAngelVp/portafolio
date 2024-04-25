@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {ServiceInterface} from '../../models/serviceInterface';
+import { ServiceInterface } from '../../models/serviceInterface';
 import { CommonModule } from '@angular/common';
 
 @Component({

@@ -20,17 +20,26 @@
     font-weight: 200;
     font-style: normal;
   }
+  .ubuntu_2 {
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+  }
   .russo {
     font-family: "Russo One", sans-serif;
     font-weight: 100;
     font-style: normal;
   }
+
 .space-line{
     line-height: 85px;
 }
 .bg_blue_normal{
-  background-color: rgb(63,87,239);
+  background-color: rgb(0, 33, 246);
 }
 .bg_blue_transparent{
-  background-color: rgb(34, 61, 241);
+  background-color: rgba(34, 62, 241, 0.567);
+}
+.bg_blue_transparent_wave{
+  background-color: rgba(0, 26, 255, 0.809);
 }

@@ -5,6 +5,7 @@ import { HeaderPersonalComponent } from '../../components/header-personal/header
 import { ToolsUsedComponent } from '../../components/tools-used/tools-used.component';
 import { AboutMeComponent } from '../../components/about-me/about-me.component';
 import { ServicesBuyComponent } from '../../components/services-buy/services-buy.component';
+import { ProjectsComponent } from '../../components/projects/projects.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ import { ServicesBuyComponent } from '../../components/services-buy/services-buy
     HeaderPersonalComponent,
     ToolsUsedComponent,
     AboutMeComponent,
-    ServicesBuyComponent
+    ServicesBuyComponent,
+    ProjectsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
