@@ -46,6 +46,18 @@ export class ToolsUsedComponent {
         name : 'data analytics',
         url: 'https://cdn-icons-png.flaticon.com/512/10397/10397165.png'
       },
+      {
+        name : 'redes',
+        url: 'https://cdn-icons-png.flaticon.com/512/1991/1991118.png'
+      },
+      {
+        name : 'soporte',
+        url: 'https://cdn-icons-png.flaticon.com/512/1055/1055683.png'
+      },
+      {
+        name : 'git',
+        url: 'https://cdn.worldvectorlogo.com/logos/git-icon.svg'
+      },
       
     ];
 
