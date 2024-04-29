@@ -1,10 +1,21 @@
-<footer class="relative">
-    <img class="absolute h-96 w-full opacity-70" [src]="fondo_src" alt="">
-    <div class="bottom-0 left-0 right-0">
-        <div class="bg-gradient-to-tr bg-white">
-            <h2>
-                contacto
-            </h2>
+<footer class="relative w-full h-auto bg-white">
+    <div class="hidden relative left-0 right-0 bottom-0 max-w-full">
+        <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="rgb(0, 11, 113)" fill-opacity="1" d="M0,160L130.9,0L261.8,224L392.7,128L523.6,64L654.5,96L785.5,288L916.4,256L1047.3,64L1178.2,160L1309.1,160L1440,224L1440,320L1309.1,320L1178.2,320L1047.3,320L916.4,320L785.5,320L654.5,320L523.6,320L392.7,320L261.8,320L130.9,320L0,320Z"></path>
+        </svg>
+    </div>
+    <div class="relative w-full z-10 h-auto pt-7 bg_bl px-5">
+        <div class="container mx-auto">
+            <div>
+                <ul>
+                    <li *ngFor="let item of content_list; index as i">
+                        <a class="capitalize text-lg text-white ubuntu hover:cursor-pointer md:text-xl">
+                            {{i + 1}} {{item}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <app-social-media class="relative"/>
     </div>
 </footer>

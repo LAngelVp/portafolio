@@ -9,11 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
-  name : string = 'Luis Angel';
   links_navbar:string[] =[
     'Inicio',
     'Proyectos',
     'Acerca de',
     'Contacto'
   ]
+  img_personal : string = "../../../../assets/images/name_personal_resize.png"
 }

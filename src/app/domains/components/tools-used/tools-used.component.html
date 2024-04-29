@@ -1,6 +1,6 @@
 <div>
     <div>
-        <h2 class="text-4xl righteous text-center md:text-start">
+        <h2 class="text-3xl righteous text-center md:text-start md:text-6xl">
             Conocimientos
         </h2>
     </div>
@@ -8,7 +8,7 @@
         <ul class="flex" *ngFor="let item of tools_used">
             <li class="flex flex-col justify-center items-center bg-slate-100 w-32 rounded p-4 gap-4">
                 <img class="w-16" [src]="item.url" alt="">
-                <p class="text-center p-0 mx-auto text-black ubuntu">{{item.name | uppercase}}</p>
+                <p class="text-center p-0 mx-auto text-black ubuntu text-sm md:text-lg">{{item.name | uppercase}}</p>
             </li>
         </ul>
     </div>

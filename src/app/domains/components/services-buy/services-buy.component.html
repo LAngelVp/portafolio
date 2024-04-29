@@ -1,17 +1,17 @@
-<div class="w-full my-10">
+<div class="w-full my-16">
     <div>
-        <h2 class="text-4xl righteous text-center md:text-start">
+        <h2 class="text-3xl righteous text-center md:text-start md:text-4xl lg:text-6xl">
             Servicios
         </h2>
     </div>
     <div class="flex gap-10 my-5 place-content-center flex-wrap">
         <ul class="flex" *ngFor="let item of array_services">
-            <li class="flex flex-col justify-center items-center bg-slate-100 w-72 rounded p-4 shadow-xl gap-5 hover:scale-95 hover:transition hover:cursor-pointer">
+            <li class="flex flex-col justify-center items-center bg-slate-100 w-72 md:w-96 rounded p-4 shadow-xl gap-5 hover:scale-95 hover:transition hover:cursor-pointer">
                 <img class="block w-96 h-52" [src]="item.image" alt="">
-                <p class="righteous text-xl text-center capitalize">
+                <p class="righteous text-2xl text-center capitalize md:text-3xl xl:text-3xl">
                     {{item.name}}
                 </p>
-                <p class="ubuntu text-lg">
+                <p class="ubuntu text-xl md:text-xl lg:text-2xl">
                     {{item.description}}
                 </p>
             </li>

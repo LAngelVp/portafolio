@@ -6,6 +6,8 @@ import { ToolsUsedComponent } from '../../components/tools-used/tools-used.compo
 import { AboutMeComponent } from '../../components/about-me/about-me.component';
 import { ServicesBuyComponent } from '../../components/services-buy/services-buy.component';
 import { ProjectsComponent } from '../../components/projects/projects.component';
+import { SocialMediaComponent } from '../../components/social-media/social-media.component';
+import { WaveSpikesComponent } from '../../components/wave-spikes/wave-spikes.component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +20,8 @@ import { ProjectsComponent } from '../../components/projects/projects.component'
     ToolsUsedComponent,
     AboutMeComponent,
     ServicesBuyComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    WaveSpikesComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
