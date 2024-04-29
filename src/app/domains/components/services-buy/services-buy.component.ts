@@ -28,7 +28,7 @@ export class ServicesBuyComponent {
       image:"../../../../assets/images/img6.svg"
     },
     {
-      name: "analisis de datos",
+      name: "Análisis de datos",
       description: "Ofrecemos análisis de datos con software personalizado para visualización. Identificamos patrones y oportunidades de crecimiento. Toma decisiones informadas y estratégicas para alcanzar tus objetivos con nuestra herramienta de visualización de datos.",
       image:"../../../../assets/images/img5.svg"
     },
@@ -43,7 +43,7 @@ export class ServicesBuyComponent {
       image:"../../../../assets/images/img8.svg"
     },
     {
-      name: "app movil",
+      name: "app móvil",
       description: "Desarrollamos apps móviles a medida para potenciar tu negocio. Desde la idea hasta el lanzamiento, ofrecemos soluciones innovadoras y de alto rendimiento que mejoran la experiencia del usuario y impulsan el crecimiento empresarial.",
       image:"../../../../assets/images/img3.svg"
     }
