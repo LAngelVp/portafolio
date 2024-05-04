@@ -30,11 +30,6 @@ export class SocialMediaComponent {
       link : 'https://www.instagram.com/angelperezdev',
       image : 'https://cdn.worldvectorlogo.com/logos/instagram-2016-5.svg'
     },
-    // {
-    //   name : 'github',
-    //   link : '',
-    //   image : 'https://cdn.worldvectorlogo.com/logos/whatsapp-8.svg'
-    // },
     {
       name : 'linkedin',
       link : 'https://www.linkedin.com/in/luis-%C3%A1ngel-vallejo-p%C3%A9rez-ingsoft/',

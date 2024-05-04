@@ -1,4 +1,4 @@
-<div class="flex-col my-16">
+<div class="flex-col my-16 overflow-y-auto ">
     <div class="">
         <div>
             <h2 class="text-3xl righteous text-center md:text-start md:text-4xl lg:text-6xl">
@@ -6,10 +6,12 @@
             </h2>
         </div>
         <ul class="flex flex-col gap-6 my-5 w-11/12 place-content-center mx-auto">
-            <li *ngFor="let item of arrayProjects" class="flex flex-col md:flex-row bg-slate-100 border shadow-2xl rounded-lg hover:scale-105 hover:transition">
-                <img class="w-full md:w-2/4 md:max-h-auto rounded-s-lg" 
-                [src]="item.image" alt="">
-                <div class="flex flex-col place-content-start p-5 gap-5">
+            <li *ngFor="let item of arrayProjects" class="flex flex-col md:grid md:grid-cols-3 2xl:grid-cols-5 bg-slate-100 border shadow-2xl rounded-lg xl:hover:scale-105 xl:hover:transition">
+                <div class="md:col-span-1 2xl:col-span-2 flex">
+                    <img class="block w-full h-auto object-fill rounded-s-lg" 
+                    [src]="item.image" alt="">
+                </div>
+                <div class="md:col-span-2 2xl:col-span-3 place-content-start p-5 gap-5">
                     <div>
                         <h4 class="righteous text-2xl capitalize md:text-3xl lg:text-4xl">
                             {{item.name}}
