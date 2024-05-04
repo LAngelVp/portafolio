@@ -6,12 +6,12 @@
             </h2>
         </div>
         <ul class="flex flex-col gap-6 my-5 w-11/12 place-content-center mx-auto">
-            <li *ngFor="let item of arrayProjects" class="flex flex-col md:grid md:grid-cols-3 2xl:grid-cols-5 bg-slate-100 border shadow-2xl rounded-lg xl:hover:scale-105 xl:hover:transition">
-                <div class="md:col-span-1 2xl:col-span-2 flex">
-                    <img class="block w-full h-auto object-fill rounded-s-lg" 
+            <li *ngFor="let item of arrayProjects" class="flex flex-col lg:grid lg:grid-cols-3 2xl:grid-cols-5 bg-slate-100 border shadow-2xl rounded-lg xl:hover:scale-105 xl:hover:transition">
+                <div class="lg:col-span-1 2xl:col-span-2 flex">
+                    <img class="block w-full h-auto object-fill rounded-t-lg lg:rounded-s-lg" 
                     [src]="item.image" alt="">
                 </div>
-                <div class="md:col-span-2 2xl:col-span-3 place-content-start p-5 gap-5">
+                <div class="lg:col-span-2 2xl:col-span-3 place-content-start p-5 gap-5">
                     <div>
                         <h4 class="righteous text-2xl capitalize md:text-3xl lg:text-4xl">
                             {{item.name}}
