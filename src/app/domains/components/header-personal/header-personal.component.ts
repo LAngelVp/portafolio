@@ -9,9 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './header-personal.component.css'
 })
 export class HeaderPersonalComponent {
-  subtitulo : string = 'Desarrollando el futuro digital juntos: ¡Descubre mi portafolio y transforma tu visión en realidad!'
   // url_video:string="../../../../assets/video/video_header.mp4";
-  titulo:string=" Innovación Tecnológica y Soluciones Creativas"
+  titulo:string="Que todas las aventuras se vuelvan realidad con compromiso y constancia"
   img : string = "../../../../assets/images/img1.svg"
 
   btnSolicitarInformacion(){
