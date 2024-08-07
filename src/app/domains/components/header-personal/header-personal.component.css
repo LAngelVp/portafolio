@@ -1,5 +1,5 @@
 .fondo{
-    background-image: linear-gradient(to right, #000000 0%, #000c64 100%);
+    background-image: radial-gradient(circle, #b6b6b6 0%, #040101 100%);
 }
 .shadown-photo{
     box-shadow: 8px 15px 30px rgba(148, 148, 148, 0.538);

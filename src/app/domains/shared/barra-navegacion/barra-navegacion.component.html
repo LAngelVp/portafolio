@@ -1,7 +1,11 @@
-<div class="">
-    <ul class="absolute flex items-center justify-end gap-3 h-14 right-5">
-        <li class="text-white cinzel font-bold">About</li>
-        <li class="text-white cinzel font-bold">Projects</li>
-        <li class="text-white cinzel font-bold">Coact</li>
+<div class="absolute z-10 container">
+    <ul class="flex items-center justify-end gap-3 h-14 pe-4">
+        <li *ngFor="let item of ruta"
+        class="text-white righteous font-bold text-2xl">
+            <a [routerLink]="item.direction">
+                {{item.name}}
+            </a>
+        </li>
     </ul>
 </div>
+<router-outlet/>

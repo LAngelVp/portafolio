@@ -10,7 +10,8 @@ import { BarraNavegacionComponent } from './domains/shared/barra-navegacion/barr
   imports: [
     RouterModule,
     HomeComponent,
-    BarraNavegacionComponent
+    BarraNavegacionComponent,
+    RouterOutlet
   ],
   template: `
     <app-barra-navegacion></app-barra-navegacion>
