@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './domains/pages/home/home.component';
 import { FooterComponent } from './domains/components/footer/footer.component';
+import { BarraNavegacionComponent } from './domains/shared/barra-navegacion/barra-navegacion.component';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,12 @@ import { FooterComponent } from './domains/components/footer/footer.component';
   imports: [
     RouterModule,
     HomeComponent,
+    BarraNavegacionComponent
   ],
-  template: '<router-outlet/>'
+  template: `
+    <app-barra-navegacion></app-barra-navegacion>
+    <router-outlet/>
+  `
 })
 export class AppComponent {
   

@@ -58,4 +58,6 @@
 .bg_bl{
   background-color: rgb(0, 11, 113);
 }
-
+.sombra_letra{
+  text-shadow:  10px 10px 5px black;
+}

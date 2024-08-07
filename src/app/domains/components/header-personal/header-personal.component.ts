@@ -9,9 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './header-personal.component.css'
 })
 export class HeaderPersonalComponent {
-  // url_video:string="../../../../assets/video/video_header.mp4";
-  titulo:string="Que todas las aventuras se vuelvan realidad con compromiso y constancia"
-  img : string = "../../../../assets/images/img1.svg"
+  titulo:string="No te compares con nadie en este mundo. Si lo haces, te estás insultando a ti mismo."
+  img : string = "../../../../assets/images/imagen1.png"
 
   btnSolicitarInformacion(){
     const numero = '2713997432';
