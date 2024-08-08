@@ -1,4 +1,30 @@
-<div class="flex-col my-16 overflow-y-auto ">
+<div class="py-24 bg-black">
+    <ul class="grid grid-cols-1 w-96 m-auto gap-10">
+        <li *ngFor="let item of arrayProjects" class="cristal">
+            <img [src]="item.image" [alt]="item.image_descrip" class=" rounded-t-lg">
+            <div class="px-3">
+                <p class="righteous text-3xl text-center my-2">
+                    {{item.titulo}}
+                </p>
+                <p class="righteous text-xl opacity-80 text-blue-800">
+                    {{item.subtitulo}}
+                </p>
+                <p class="ubuntu_2 text-lg my-2 text-justify">
+                    {{item.description}}
+                </p>
+            </div>
+            <div class="w-full flex justify-end pe-4 mb-3">
+                <button class="flex bg-blue-800 px-5 py-2 rounded sombra_caja hover:bg-blue-950">
+                    <a class="righteous text-white text-md tracking-widest">
+                        Saber más
+                    </a>
+                </button>
+            </div>
+            </li>
+    </ul>
+</div>
+
+<!-- <div class="grid grid-cols-1 ">
     <div class="">
         <div>
             <h2 class="text-3xl righteous text-center md:text-start md:text-4xl lg:text-6xl">
@@ -27,4 +53,5 @@
             </li>
         </ul>
     </div>
-</div>
+</div> -->
+<!-- Slider main container -->

@@ -21,16 +21,20 @@ export class BarraNavegacionComponent {
   img_menu_cerrar : string = '../../../../assets/images/cerrar.svg';
   ruta =[
     {
+      name : 'Inicio',
+      direction : ''
+    },
+    {
       name : 'About',
       direction : '/about'
     },
     {
       name : 'Projects',
-      direction : ''
+      direction : '/projects'
     },
     {
       name : 'Contact',
-      direction : ''
+      direction : '/contact'
     },
   ] 
 }

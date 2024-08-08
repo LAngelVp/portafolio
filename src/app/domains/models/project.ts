@@ -1,7 +1,8 @@
 export interface Project {
-    id : number;
-    name : string;
+    titulo : string;
+    subtitulo : string;
     description : string;
     enterprise : string;
     image : string;
+    image_descrip : string;
 }
