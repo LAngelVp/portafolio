@@ -1,12 +1,12 @@
-<div class="py-24 bg-black">
-    <ul class="grid grid-cols-1 w-96 m-auto gap-10">
+<div class="py-24 trasfondo">
+    <ul class="grid grid-cols-1 w-96 m-auto gap-10 ">
         <li *ngFor="let item of arrayProjects" class="cristal">
             <img [src]="item.image" [alt]="item.image_descrip" class=" rounded-t-lg">
             <div class="px-3">
-                <p class="righteous text-3xl text-center my-2">
+                <p class="righteous text-3xl text-center my-2 titulo_color">
                     {{item.titulo}}
                 </p>
-                <p class="righteous text-xl opacity-80 text-blue-800">
+                <p class="righteous text-xl text-center opacity-80 subtitulo_color">
                     {{item.subtitulo}}
                 </p>
                 <p class="ubuntu_2 text-lg my-2 text-justify">
@@ -14,13 +14,13 @@
                 </p>
             </div>
             <div class="w-full flex justify-end pe-4 mb-3">
-                <button class="flex bg-blue-800 px-5 py-2 rounded sombra_caja hover:bg-blue-950">
+                <button class="flex btn_color px-5 py-2 rounded sombra_caja hover:bg-blue-700">
                     <a class="righteous text-white text-md tracking-widest">
                         Saber más
                     </a>
                 </button>
             </div>
-            </li>
+        </li>
     </ul>
 </div>
 

@@ -58,10 +58,25 @@
 }
 
 .cristal{
-  background: white;
+  background: #ffffff;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(35, 11, 171, 0.653);
-  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.709);
+  /* border: 2px solid rgba(0, 0, 0, 0.653);*/
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.833); 
   border-radius: 10px;
   opacity: 80%;
+}
+.trasfondo{
+  background: #ffffff;
+}
+.trasfondo_dos{
+  background: #bbc4c2;
+}
+.titulo_color{
+  color: #000000;
+}
+.subtitulo_color{
+  color: #002e98;
+}
+.btn_color{
+  background: #003d83;
 }
