@@ -35,6 +35,10 @@ export class ToolsUsedComponent {
         url: 'https://cdn.worldvectorlogo.com/logos/c--4.svg'
       },
       {
+        name : 'Salesforce',
+        url: 'https://cdn.worldvectorlogo.com/logos/salesforce-2.svg'
+      },
+      {
         name : 'typescript',
         url: 'https://cdn.worldvectorlogo.com/logos/typescript.svg'
       },

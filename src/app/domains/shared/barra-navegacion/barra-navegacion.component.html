@@ -1,7 +1,7 @@
 <div class="absolute z-10 flex justify-center w-full pt-2">
-    <ul class="flex items-center justify-center gap-3 h-14 pe-4 w-2/3 fondo rounded-3xl">
+    <ul class="flex items-center justify-center gap-3 h-10 w-2/3 fondo rounded-3xl">
         <li *ngFor="let item of ruta"
-        class="righteous font-bold text-2xl">
+        class="righteous font-bold text-xl">
             <a [routerLink]="item.direction" class="text-white">
                 {{item.name}}
             </a>
