@@ -6,6 +6,7 @@ import { BarraNavegacionComponent } from './domains/shared/barra-navegacion/barr
 import { AboutMeComponent } from './domains/components/about-me/about-me.component';
 import { ProjectsComponent } from './domains/components/projects/projects.component';
 import { ContactMeComponent } from './domains/components/contact-me/contact-me.component';
+import { TimelineComponent } from './domains/components/timeline/timeline.component';
 
 export const routes: Routes = [
     {
@@ -13,6 +14,10 @@ export const routes: Routes = [
         path: '',
         component: HomeComponent
 
+    },
+    {
+        path: 'timeline',
+        component: TimelineComponent
     },
     {
         path: 'about',

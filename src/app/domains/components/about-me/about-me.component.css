@@ -5,3 +5,35 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.parallax-bg2 {
+    background-image: url('../../../../assets/images/tareas.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor_experiencia_laboral{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.contenedor_experiencia_laboral > div{
+    width: 50%;
+    max-height: 500px;
+}
+.contenedor_timeline{
+    overflow-y: auto;
+}
+.contenedor_timeline::-webkit-scrollbar {
+    width: 0; /* Oculta la barra de desplazamiento vertical */
+    height: 0; /* Oculta la barra de desplazamiento horizontal */
+}
+/* Para Firefox */
+.contenedor_timeline {
+    scrollbar-width: none; /* Oculta la barra de desplazamiento */
+}
+
+/* Para Internet Explorer y Edge Legacy (No siempre es necesario) */
+.contenedor_timeline {
+    -ms-overflow-style: none; /* Oculta las barras de desplazamiento en IE y Edge Legacy */
+}

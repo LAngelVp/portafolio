@@ -1,0 +1,86 @@
+
+.linea {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0rem auto;
+    padding: 5rem 0;
+    background-color: black;
+}
+
+.linea::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #007bff;
+    transform: translateX(-50%);
+}
+.linea::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 50px white;
+}
+.elemento{
+    position: relative;
+    display: flex;
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.punto{
+    position: relative;
+    top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.punto::before{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    border: 2px solid white;
+    box-shadow: 0px 0px 50px white;
+    z-index: 1;
+}
+.elemento:nth-child(odd){
+    justify-content: end;
+    align-items: end;
+}
+.elemento:nth-child(even){
+    justify-content: start;
+    align-items: start;
+}
+.contenido{
+    position: relative;
+    width: 40%;
+    background-color: white;
+    box-shadow: 0px 0px 30px white;
+    border-radius: 1rem;
+    padding: 1rem;
+    opacity: 75%;
+
+}
+
+
+
