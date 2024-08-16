@@ -1,14 +1,14 @@
 <div class="my-5">
     <div>
-        <h2 class="text-2xl righteous text-center md:text-start md:text-6xl mb-5 p-0">
+        <h2 class="colorTexto text-4xl righteous text-center md:text-start md:text-6xl mb-5 p-0">
             Conocimientos
         </h2>
     </div>
     <div class="flex gap-10 place-content-center flex-wrap min-h-full">
         <ul class="flex" *ngFor="let item of tools_used">
-            <li class="flex flex-col justify-center items-center cristal w-32 rounded p-4 gap-4">
+            <li class="flex flex-col justify-center items-center w-28 rounded p-4 gap-4 contenedor_tools">
                 <img class="w-16 hover:animate-rotate-x hover:animate-duration-[2000ms]" [src]="item.url" alt="">
-                <p class="text-center p-0 mx-auto text-black ubuntu text-sm md:text-lg">{{item.name | uppercase}}</p>
+                <p class="text-center p-0 mx-auto text-white ubuntu text-sm md:text-lg">{{item.name | uppercase}}</p>
             </li>
         </ul>
     </div>

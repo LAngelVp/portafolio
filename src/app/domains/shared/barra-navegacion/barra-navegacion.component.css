@@ -1,4 +1,16 @@
 .fondo{
-    background: #2372cc;
+    background-color: var(--grisOscuroClaro);
     box-shadow: 0px 0px 10px black;
+    animation-name: barraNavegacion;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-timeline: var();
+}
+@keyframes barraNavegacion {
+    from {
+        transform: scale(0);
+      }
+    to {
+    transform: scale(1);
+    }
 }

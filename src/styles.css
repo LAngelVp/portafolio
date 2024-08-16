@@ -5,6 +5,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --colorFondo : #000000;
+  --colorTexto : #e0ffff;
+  --colorContenedor : #161616;
+  --colorAzul : #007BFF;
+  --colorVerdeOscuro : #004900;
+  --colorVerdeClaro : #28A745;
+  --colorAzulClaro : #69a9ff;
+  --grisClaro: #e0e0e0;
+  --grisOscuroClaro : #2c2c2c;
+  --gris: #56647b;
+}
+
+.colorTexto{
+  color: var(--colorTexto);
+}
 .playwrite {
   font-family: "Playwrite BE VLG", cursive;
   font-optical-sizing: auto;
@@ -69,9 +85,6 @@
 }
 .trasfondo_dos{
   background: #bbc4c2;
-}
-.titulo_color{
-  color: #000000;
 }
 .subtitulo_color{
   color: #002e98;

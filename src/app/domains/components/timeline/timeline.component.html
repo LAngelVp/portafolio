@@ -1,86 +1,23 @@
-<div class="w-full bg-black">
+<div class="w-full imagen">
     <div class="linea">
-        <div class="elemento">
+        <div class="elemento" *ngFor="let item of experiencia">
             <div class="punto"></div>
             <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
+                <h2 class="righteous font-bold text-2xl">
+                    {{item.puesto}}
+                </h2>
+                <cite class="cinzel">
+                    {{item.empresa}}
+                </cite>
+                <p>
+                    <span class="date">
+                        {{item.periodo}}
+                    </span>
+                </p>
+                <p class="ubuntu">
+                    {{item.descripcion}}
+                </p>
             </div>
         </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        <div class="elemento">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2>Evento 1</h2>
-                <p>Descripción del evento 1.</p>
-                <span class="date">Enero 2024</span>
-            </div>
-        </div>
-        
-        
     </div>
 </div>
