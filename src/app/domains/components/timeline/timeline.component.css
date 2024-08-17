@@ -52,10 +52,14 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
-    animation-name: scaleAnimacion;
+    /* animation-name: scaleAnimacion;
     animation-duration: 1s;
-    animation-direction: alternate;
-    animation-timeline: var();
+    animation-direction: alternate; */
+    view-timeline-name: --image ;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: scaleAnimacion;
+    animation-range: entry 25% cover 50%;
 }
 .punto{
     position: relative;
@@ -101,9 +105,11 @@
 }
 @keyframes scaleAnimacion {
     from {
-      transform: scale(0);
+    opacity: 0;
+    transform: scale(0);
     }
     to {
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
   }
