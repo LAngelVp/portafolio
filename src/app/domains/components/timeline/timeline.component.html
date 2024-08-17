@@ -3,14 +3,14 @@
         <div class="elemento" *ngFor="let item of experiencia">
             <div class="punto"></div>
             <div class="contenido">
-                <h2 class="righteous font-bold text-2xl">
+                <h2 class="righteous font-bold text-xl md:text-2xl">
                     {{item.puesto}}
                 </h2>
-                <cite class="cinzel">
+                <cite class="cinzel text-sm ">
                     {{item.empresa}}
                 </cite>
                 <p>
-                    <span class="date">
+                    <span class="date text-xs">
                         {{item.periodo}}
                     </span>
                 </p>
