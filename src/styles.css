@@ -102,9 +102,46 @@
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btnOscuro:hover {
-  background-color: var(--colorVerdeOscuro);
-  color: var(--blanco);
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+@media (min-width: 768px) {
+  .btnOscuro:hover {
+    background-color: var(--colorVerdeOscuro);
+    color: var(--blanco);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@keyframes biografia_sombra {
+  from{
+      box-shadow: 0px 0px 0px var(--colorVerdeOscuro);
+  }
+  to{
+      box-shadow: 0px 10px 55px var(--colorVerdeOscuro);
+  }
+}
+.contenedor_infografia{
+  background-color: var(--colorContenedor);
+  border-radius: 15px;
+  animation-name: biografia_sombra;
+  animation-duration: 3s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes animacion_aparicion {
+  from{
+      transform: scale(0);
+      opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.contenedor_aparicion{
+  background-color: var(--colorContenedor);
+  border-radius: 15px;
+  animation-name: animacion_aparicion;
+  animation-duration: 3s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;  
 }

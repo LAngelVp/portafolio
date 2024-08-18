@@ -16,10 +16,6 @@ export const routes: Routes = [
 
     },
     {
-        path: 'timeline',
-        component: TimelineComponent
-    },
-    {
         path: 'about',
         component: AboutMeComponent
     },

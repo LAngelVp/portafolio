@@ -1,7 +1,46 @@
 <div class="cuerpo">
-    <div class="container">
-        <img src="../../../../assets/images/notFound.svg" alt="Under Construction" class="image">
-        <h1>Página en construcción</h1>
-        <p>Nos encontramos trabajando en el porfalio</p>
+    <div class="container m-4 md:w-7/12 animate-pulse contenedor_aparicion">
+        <h2 class="righteous tracking-widest text-2xl lg:text-4xl xl:text-5xl">
+            Enviar Mensaje
+        </h2>
+        <div class="m-4">
+            <form (ngSubmit)="enviarmail()" [formGroup]="formulario">
+                <div class="flex flex-col">
+                    <label for="nombre" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
+                        Nombre:
+                    </label>
+                    <input id="nombre" formControlName="nombre" type="text" placeholder="Nombre completo" class=" border border-green-700 rounded ps-2">
+                </div>
+                <div class="flex flex-col">
+                    <label for="email" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
+                        Correo electronico:
+                    </label>
+                    <input id="email" formControlName="email" type="email" placeholder="ejemplo.123@gmail.com" class=" border border-green-700 rounded ps-2">
+                </div>
+                <div class="flex flex-col">
+                    <label for="numtelefono" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
+                        Número de telefono:
+                    </label>
+                    <input id="numtelefono" formControlName="numtelefono" type="tel" placeholder="123-123-12-12" class=" border border-green-700 rounded ps-2">
+                </div>
+                <div class="flex flex-col">
+                    <label for="asunto" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
+                        Asunto:
+                    </label>
+                    <input id="asunto" formControlName="asunto" type="text" placeholder="Ingresar asunto" class=" border border-green-700 rounded ps-2">
+                </div>
+                <div class="flex flex-col">
+                    <label for="contexto" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
+                        Contexto:
+                    </label>
+                    <textarea id="contexto" formControlName="contexto" type="text" placeholder="Ingresa una descripción del asunto" rows="5" class=" border border-green-700 rounded ps-2"></textarea>
+                </div>
+                <div class="flex flex-col md:items-end">
+                    <button type="submit" class="btnOscuro mt-4 py-2 px-4 text-lg  rounded md:w-3/12 xl:w-3/12 md:text-md lg:text-lg righteous tracking-[3px]">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
