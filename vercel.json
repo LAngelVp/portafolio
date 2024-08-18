@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "angular.json", "use": "@vercel/angular" },
+    { "src": "angular.json", "use": "@vercel/static-build" },
     { "src": "Backend/app.py", "use": "@vercel/python" }
   ],
   "routes": [
