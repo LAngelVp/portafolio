@@ -1,19 +1,13 @@
 from flask import Flask, request, jsonify
-from flask_mail import Mail, Message
-from flask_cors import CORS
+import sendgrid
+from sendgrid.helpers.mail import Mail
+import os
 
 app = Flask(__name__)
-CORS(app)
 
-# Configuración de Flask-Mail
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'angelvallejop9610@gmail.com'
-app.config['MAIL_PASSWORD'] = 'MyNameIs@ngel311096$Gmail'
-app.config['MAIL_DEFAULT_SENDER'] = 'angelvallejop9610@gmail.com'
-
-mail = Mail(app)
+# Configuración de SendGrid
+SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+sg = sendgrid.SendGridAPIClient(api_key=SENDGRID_API_KEY)
 
 @app.route('/api/enviar-correo', methods=['POST'])
 def enviar_correo():
@@ -24,12 +18,15 @@ def enviar_correo():
     nombre = data.get('nombre')
     numtelefono = data.get('numtelefono')
 
-    msg = Message(subject=asunto, recipients=['destinatario@example.com'], body=f'Nombre: {nombre}\nNúmero de teléfono: {numtelefono}\n\n{contexto}')
-    msg.reply_to = email
-
+    message = Mail(
+        from_email='neal.ocaffry@gmail.com',  # Tu dirección de correo electrónico
+        to_emails=email,  # Dirección del destinatario
+        subject=asunto,
+        plain_text_content=f'Nombre: {nombre}\nNúmero de teléfono: {numtelefono}\n\n{contexto}'
+    )
     try:
-        mail.send(msg)
-        return jsonify({'message': 'Correo enviado exitosamente'}), 200
+        response = sg.send(message)
+        return jsonify({'message': 'Correo enviado exitosamente'}), response.status_code
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
