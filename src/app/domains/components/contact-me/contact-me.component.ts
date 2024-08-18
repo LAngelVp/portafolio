@@ -29,7 +29,7 @@ export class ContactMeComponent implements OnInit {
 
   enviarmail() {
     if (this.formulario.valid) {
-      this.http.post('/api/enviar-correo', this.formulario.value)
+      this.http.post('/api/enviarcorreo', this.formulario.value)
         .subscribe(response => {
           console.log('Correo enviado exitosamente', response);
         }, error => {

@@ -11,7 +11,7 @@ if not SENDGRID_API_KEY:
     raise ValueError("La clave API de SendGrid no está configurada en las variables de entorno.")
 sg = sendgrid.SendGridAPIClient(api_key=SENDGRID_API_KEY)
 
-@app.route('/api/enviar-correo', methods=['POST'])
+@app.route('/api/enviarcorreo', methods=['POST'])
 def enviar_correo():
     data = request.get_json()
     email = data.get('email')
