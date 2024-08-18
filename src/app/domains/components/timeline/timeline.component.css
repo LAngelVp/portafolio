@@ -1,13 +1,4 @@
-.imagen{
-    /* background-image: url('../../../../assets/images/faro.jpg'); */
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 100%;
-}
+
 .linea {
     position: relative;
     display: flex;
@@ -51,10 +42,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    /* animation-name: scaleAnimacion;
-    animation-duration: 1s;
-    animation-direction: alternate; */
     view-timeline-name: --image ;
     view-timeline-axis: block;
     animation-timeline: --image;
@@ -78,7 +65,6 @@
     background-color: var(--gris);
     border: 2px solid var(--colorVerdeClaro);
     box-shadow: 0px 0px 50px var(--colorVerdeClaro);
-    z-index: 1;
 }
 .elemento:nth-child(odd){
     justify-content: end;
@@ -90,12 +76,16 @@
 }
 .contenido{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 40%;
     background-color: var(--gris);
     box-shadow: 0px 10px 40px var(--colorVerdeOscuro);
     border-radius: 1rem;
     padding: 1rem;
     opacity: 50%;
+    
 }
 .date{
     background-color: var(--grisOscuroClaro);
@@ -113,4 +103,10 @@
         opacity: 1;
         transform: scale(1);
     }
-  }
+}
+.contenedorPop{
+    width: 70%;
+    background-color: var(--grisOscuroClaro);
+    border-radius: 1rem;
+    padding: 1rem;
+}

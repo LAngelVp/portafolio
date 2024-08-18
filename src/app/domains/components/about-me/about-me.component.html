@@ -1,6 +1,6 @@
 <div class="bg-black w-full relative  grid grid-cols-1 justify-center items-center z-0">
-    <div class="relative h-lvh max-w-full w-full pt-20  parallax-bg">
-        <div class="relative container w-96 mx-auto py-7 px-10 contenedor_infografia">
+    <div class="relative h-lvh pt-20  parallax-bg">
+        <div class="relative container w-96 mx-auto py-7 px-10 contenedor_infografia md:hidden">
             <h3 class="text-2xl poetsen text-white">
                 Descripción
             </h3>
@@ -9,6 +9,19 @@
                 {{description_personal}}
             </p>
         </div>
+        <div class="grid grid-cols-2 justify-center items-center h-full">
+            <div class="hidden md:flex flex-col min-w-1/2 contenedor_infografia p-5 mx-10">
+                <h3 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl  cinzel text-white font-bold mb-3">
+                    Descripción
+                </h3>
+                <p class="ubuntu text-justify text-sm md:text-base lg:text-xl text-white">
+                    {{description_personal}}
+                </p>
+            </div>
+            <div class="hidden md:flex min-w-1/2 justify-center items-center">
+                <img [src]="image2" alt="foto" class="block w-2/3 rounded-full animate-jump animate-delay-[2000ms] animate-duration-[2500ms] animate-fill-both max-h-1/2">
+            </div>
+        </div>
     </div>
     <div class="">
         <app-tools-used/>
@@ -16,16 +29,57 @@
     <div class="contenedor_experiencia_laboral">
         <div class="">
             <div class="contenedor_experiencia flex flex-col justify-center items-center">
-                <h2 class="texto_experiencia text-2xl text-center ubuntu_2">
+                <h2 class="texto_experiencia text-2xl lg:text-4xl text-center ubuntu_2">
                     Trabajos con el transcurso del tiempo
                 </h2>
-                <p class="texto_experiencia text-center py-3 ubuntu">
+                <p class="texto_experiencia text-center py-3 ubuntu text-base lg:text-xl">
                     Un recorrido visual por mi trayectoria profesional: cada paso, un nuevo desafío superado y un logro alcanzado. Descubre cómo mi experiencia ha evolucionado a lo largo del tiempo.
                 </p>
             </div>
         </div>
         <div class="contenedor_timeline">
-            <app-timeline/>
+            <app-timeline (showPopUp)="handlePopUp($event)"/>
         </div>
     </div>
 </div>
+<div *ngIf="showPopupItem" class="popup fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50" (click)="closePopUp()">
+    <div class="contenedorPop p-4 border rounded shadow-lg" (click)="$event.stopPropagation()">
+      <h2 class="text-black text-xl md:text-2xl lg:text-4xl font-bold righteous">{{showPopupItem.puesto}}</h2>
+      <p class="cinzel text-sm md:text-lg lg:text-xl">
+          <strong>Empresa:</strong> {{showPopupItem.empresa}}
+      </p>
+      <p class=" ubuntu text-xs md:text-base lg:text-lg">
+          <strong>Periodo:</strong> {{showPopupItem.periodo}}
+      </p>
+
+      <ul class="p-2 bg-gray-400 rounded my-2">
+        <p class="ubuntu font-bold text-sm md:text-lg lg:text-2xl">
+            Actividades:
+        </p>
+        <li *ngFor="let item of showPopupItem.detalles" class="flex gap-2">
+            <div class="min-w-5">
+                <img [src]="showPopupItem.img_check" alt="check" class="block w-5">
+            </div>
+            <p class="ubuntu text-sm md:text-lg lg:text-xl">
+                {{item.actividad}}
+            </p>
+        </li>
+      </ul>
+      <ul class="p-2 bg-gray-400 rounded my-2" >
+        <p class="ubuntu font-bold text-sm md:text-lg lg:text-2xl">
+            Logros:
+        </p>
+        <li *ngFor="let item of showPopupItem.logros" class="flex gap-2">
+            <div class="min-w-5">
+                <img [src]="showPopupItem.img_goal" alt="check" class="block w-5">
+            </div>
+            <p class="ubuntu text-sm md:text-lg lg:text-xl">
+                {{item.nombre}}
+            </p>
+        </li>
+      </ul>
+      <button (click)="closePopUp()" class="btnOscuro mt-4 py-2 px-4 text-xs rounded md:text-md lg:text-lg righteous tracking-[3px]">
+        Cerrar
+      </button>
+    </div>
+  </div>

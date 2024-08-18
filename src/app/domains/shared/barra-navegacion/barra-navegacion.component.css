@@ -6,6 +6,37 @@
     animation-direction: alternate;
     animation-timeline: var();
 }
+.colorLetras {
+    position: relative;
+    color: white; /* Color inicial del texto */
+    display: inline-block;
+    overflow: hidden;
+}
+
+.colorLetras::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, var(--colorAzul) 0%, transparent 60%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.colorLetras:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.colorLetras:hover {
+    color: var(--colorAzul);
+    transition: color 0.6s ease-in-out;
+}
+
+
 @keyframes barraNavegacion {
     from {
         transform: scale(0);

@@ -1,23 +1,30 @@
-<div class="w-full imagen">
-    <div class="linea">
-        <div class="elemento" *ngFor="let item of experiencia">
-            <div class="punto"></div>
-            <div class="contenido">
-                <h2 class="righteous font-bold text-xl md:text-2xl">
-                    {{item.puesto}}
-                </h2>
-                <cite class="cinzel text-sm ">
-                    {{item.empresa}}
-                </cite>
-                <p>
-                    <span class="date text-xs">
-                        {{item.periodo}}
-                    </span>
-                </p>
-                <p class="ubuntu">
-                    {{item.descripcion}}
-                </p>
+<section class="relative">
+    <div class="w-full bg-black">
+        <div class="linea">
+            <div class="elemento" *ngFor="let item of experiencia">
+                <div class="punto"></div>
+                <div class="contenido">
+                    <h2 class="righteous font-bold text-xl md:text-2xl lg:text-4xl">
+                        {{item.puesto}}
+                    </h2>
+                    <cite class="cinzel text-sm md:text-lg lg:text-2xl">
+                        {{item.empresa}}
+                    </cite>
+                    <p>
+                        <span class="date text-xs md:text-base lg:text-lg">
+                            {{item.periodo}}
+                        </span>
+                    </p>
+                    <p class="ubuntu text-sm md:text-lg lg:text-xl">
+                        {{item.descripcion}}
+                    </p>
+                    <div class="flex justify-end mt-2">
+                        <button (click)="mostrarPopUp(item)" class="btnOscuro py-2 px-4 text-xs rounded md:text-md lg:text-lg righteous tracking-[3px]">
+                            Información
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>

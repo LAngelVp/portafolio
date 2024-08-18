@@ -2,10 +2,10 @@
     <ul class="flex items-center justify-center gap-4 h-10 w-2/3 fondo rounded-3xl">
         <li *ngFor="let item of ruta"
         class="righteous font-bold text-xl md:text-3xl">
-            <a [routerLink]="item.direction" class="text-white pt-2">
+            <a [routerLink]="item.direction" class="colorLetras pt-2">
                 {{item.name}}
             </a>
-        </li>
+        </li> 
     </ul>
 </div>
 <router-outlet/>
