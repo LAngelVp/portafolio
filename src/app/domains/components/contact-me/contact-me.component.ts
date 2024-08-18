@@ -13,19 +13,19 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './contact-me.component.css'
 })
 export class ContactMeComponent implements OnInit {
-  formulario: FormGroup = this.fb.group({});
+  formulario: FormGroup;
 
-  constructor(private fb : FormBuilder, private http : HttpClient){}
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.formulario = this.fb.group({
-      nombre : ['', [Validators.required]],
-      email : ['', [Validators.required, Validators.email]],
-      numtelefono : ['', [Validators.required, Validators.minLength(10), Validators.pattern('[0-9]')]],
-      asunto : ['', [Validators.required]],
-      contexto : ['', [Validators.required]],
-    })
+      nombre: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      numtelefono: ['', [Validators.required, Validators.minLength(10), Validators.pattern('[0-9]*')]],
+      asunto: ['', [Validators.required]],
+      contexto: ['', [Validators.required]],
+    });
   }
+
+  ngOnInit(): void {}
 
   enviarmail() {
     if (this.formulario.valid) {
@@ -35,6 +35,8 @@ export class ContactMeComponent implements OnInit {
         }, error => {
           console.error('Error al enviar el correo', error);
         });
+    } else {
+      console.log('Formulario no válido');
     }
   }
 }
