@@ -6,7 +6,9 @@
   ],
   "routes": [
       { "src": "/contact", "dest": "/Backend/app.py" },
-      { "src": "/(.*)", "dest": "/portafolio/browser/$1" },
-      { "src": "/about", "dest": "/portafolio/browser/$1" }
+      { "src": "about", "dest": "/portafolio/browser/$1" },
+      { "src": "projects", "dest": "/portafolio/browser/$1" },
+      { "src": "contact", "dest": "/portafolio/browser/$1" },
+      { "src": "/(.*)", "dest": "/portafolio/browser/$1" }
   ]
 }
