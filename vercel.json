@@ -9,6 +9,6 @@
     { "src": "/(.*)", "dest": "/portafolio/browser/$1" }
   ],
   "rewrites" : [
-    { "source": "/(.*)", "destination": "/portafolio/browser/index.html" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
