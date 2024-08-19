@@ -21,7 +21,7 @@ config.read(ruta_settings)
 # Inicializar Flask
 app = Flask(__name__)
 # CORS(app)
-CORS(app, resources={r"/api/*": {"origins": "https://portafolio-luisperez.vercel.app"}}) 
+CORS(app, resources={r"/api/*": {"origins": "https://portafolio-luisperez.vercel.app/contact"}}) 
 
 # Intentar obtener la sección SETTINGS
 try:
