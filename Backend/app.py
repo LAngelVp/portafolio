@@ -36,7 +36,7 @@ def send_mail_using_sendgrid(api_key, from_email, to_emails, subject, html_conte
             return {'error': str(e)}
     return {'error': 'Invalid parameters'}
 
-@app.route('/api/enviarcorreo', methods=['POST'])
+@app.route('/contact', methods=['POST'])
 def enviar_correo():
     data = request.json
     if not data:
