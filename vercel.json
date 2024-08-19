@@ -6,7 +6,7 @@
     ],
     "rewrites": [
       { "source": "/api/(.*)", "destination": "/Backend/app.py" },
-      { "source": "/(.*)", "destination": "/portafolio/browser/index.html" }
+      { "source": "/(.*)", "destination": "/portafolio/browser/index" }
     ],
     "cleanUrls": true,
     "trailingSlash": false
