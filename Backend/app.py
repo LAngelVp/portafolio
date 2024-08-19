@@ -50,7 +50,7 @@ def send_mail():
             from_email=email,
             to_emails=TO_EMAIL,
             subject=subject,
-            plain_text_content=f'Nombre: {name}\nNúmero de teléfono: {phone}\n\n{context}'
+            html_content=f'<p>Nombre: {name}</p><p>Número de teléfono: {phone}</p><p>{context}</p>'
         )
         try:
             sg = SendGridAPIClient(API_KEY)
