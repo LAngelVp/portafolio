@@ -4,11 +4,11 @@
     { "src": "package.json", "use": "@vercel/static-build" },
     { "src": "Backend/app.py", "use": "@vercel/python" }
   ],
-  "rewrites" : [
-    { "source": "/(.*)", "destination": "/portafolio/browser/index.html"}
-  ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/Backend/app.py" },
     { "src": "/(.*)", "dest": "/portafolio/browser/$1" } 
+  ],
+  "rewrites" : [
+    { "source": "/(.*)", "destination": "/portafolio/browser/index.html"}
   ]
 }
