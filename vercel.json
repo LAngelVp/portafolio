@@ -3,5 +3,9 @@
   "builds": [
       { "src": "package.json", "use": "@vercel/static-build" },
       { "src": "Backend/app.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+      { "src": "/contact", "dest": "/Backend/app.py" },
+      { "src": "/(.*)", "dest": "/portafolio/browser/$1" }
   ]
 }
