@@ -6,9 +6,6 @@
   ],
   "routes": [
       { "src": "/contact", "dest": "/Backend/app.py" },
-      { "src": "/contact", "dest": "./src/app/domains/components/contact-me/contact-me.component.html" },
-    { "src": "/about", "dest": "./src/app/domains/components/about-me/about-me.component.html" },
-    { "src": "/projects", "dest": "./src/app/domains/components/projects/projects.component.html" },
     { "src": "/(.*)", "dest": "/portafolio/browser/index.html" },
       { "src": "/(.*)", "dest": "/portafolio/browser/$1" }
   ]
