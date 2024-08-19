@@ -5,7 +5,7 @@
     { "src": "Backend/app.py", "use": "@vercel/python" }
   ],
   "rewrites" : [
-    { "source": "/(.*)", "destination": "/portafolio/browser/$1" }
+    { "source": "/(.*)", "destination": "/portafolio/browser/index.html"}
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/Backend/app.py" },
