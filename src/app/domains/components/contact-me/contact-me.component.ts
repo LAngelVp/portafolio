@@ -30,7 +30,7 @@ export class ContactMeComponent implements OnInit{
   enviarmail(): void {
     if (this.formulario.valid) {
       const emailData = this.formulario.value;
-      this.http.post('https://portafolio-luisperez.vercel.app/api/contact', emailData)
+      this.http.post('https://portafolio-luisperez.vercel.app/contact', emailData)
         .subscribe(
           response => {
             console.log('Correo enviado exitosamente', response);

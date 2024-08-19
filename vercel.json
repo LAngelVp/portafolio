@@ -5,7 +5,8 @@
       { "src": "Backend/app.py", "use": "@vercel/python" }
   ],
   "routes": [
-      { "src": "/api/contact", "dest": "/Backend/app.py" },
-      { "src": "/(.*)", "dest": "/dist/portafolio/$1" }
+      { "src": "/contact", "dest": "/Backend/app.py" },
+      { "src": "/(.*)", "dest": "/dist/portafolio/browser/$1" },
+      { "src": "/", "dest": "/dist/portafolio/browser/$1" }
   ]
 }
