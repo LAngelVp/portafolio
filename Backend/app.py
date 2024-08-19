@@ -51,7 +51,7 @@ def sendMailUsingSendGrid():
         return jsonify({'error': 'Todos los campos son requeridos.'}), 400
 
     # Verificar los valores necesarios
-    if API and email and len(to_emails) > 0:
+    if API and email:
         message = Mail(
             email,
             to_emails,

@@ -35,16 +35,16 @@ export class ContactMeComponent implements OnInit{
           response => {
             console.log('Correo enviado exitosamente', response);
             alert('¡El correo fue enviado de manera exitosa! \n Será contactado a su número de teléfono o correo electrónico en un lapso máximo de 24hrs.'); // Mostrar alerta de éxito
-            this.formulario.reset(); 
           },
           error => {
             console.error('Error al enviar el correo', error);
             alert('Error al enviar el correo');
           }
         );
-    } else {
-      console.error('Formulario inválido');
-      alert('La información que esta brindando no es correcta, favor de corregir los datos.');
-    }
+      } else {
+        console.error('Formulario inválido');
+        alert('La información que esta brindando no es correcta, favor de corregir los datos.');
+      }
+      this.formulario.reset(); 
   }
 }
