@@ -56,10 +56,10 @@ def enviar_correo():
         # Construir el contenido HTML con formato
         html_content = f"""
         Nombre del remitente : {data.get('nombre', '')}
-        Asunto {data.get('asunto', '')}
         Correo de contacto : {data.get('email', '')}
-        Motivo : {data.get('contexto', '')}
         Numero de telefono para contactar : {data.get('numtelefono', '')}
+        Asunto {data.get('asunto', '')}
+        Motivo : {data.get('contexto', '')}
         """
 
         response = send_mail_using_sendgrid(api_key, from_email, to_emails, subject, html_content)
