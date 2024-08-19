@@ -1,13 +1,12 @@
 {
-    "version": 2,
-    "builds": [
+  "version": 2,
+  "builds": [
       { "src": "package.json", "use": "@vercel/static-build" },
       { "src": "Backend/app.py", "use": "@vercel/python" }
-    ],
-
-    
-    "routes": [
+  ],
+  "routes": [
       { "src": "/contact", "dest": "/Backend/app.py" },
-      { "src": "/", "dest": "/dist/portafolio/$1" } 
-    ]
+      { "src": "/(.*)", "dest": "/dist/portafolio/$1" },
+      { "src": "/", "dest": "/dist/portafolio/index.html" }
+  ]
 }
