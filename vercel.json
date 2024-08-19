@@ -1,12 +1,10 @@
 {
     "version": 2,
     "builds": [
-      { "src": "package.json", "use": "@vercel/static-build" },
       { "src": "Backend/app.py", "use": "@vercel/python" }
     ],
     "rewrites": [
-      { "source": "/api/(.*)", "destination": "/Backend/app.py" },
-      { "source": "/(.*)", "destination": "/portafolio/browser/$1" }
+      { "source": "/api/(.*)", "destination": "/Backend/app.py" }
     ],
     "cleanUrls": true,
     "trailingSlash": false
