@@ -59,7 +59,8 @@ def enviar_correo():
         Correo de contacto : {data.get('email', '')}
         Numero de telefono para contactar : {data.get('numtelefono', '')}
         Asunto {data.get('asunto', '')}
-        Motivo : {data.get('contexto', '')}
+        Motivo : 
+        {data.get('contexto', '')}
         """
 
         response = send_mail_using_sendgrid(api_key, from_email, to_emails, subject, html_content)
