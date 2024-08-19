@@ -34,7 +34,6 @@ except KeyError:
 # Obtener los valores necesarios de la configuración
 API = settings.get("APIKEY", None)
 print(API)
-from_email = settings.get("FROM", None)
 to_emails = settings.get("TO", "").split(",")  # Manejar múltiples destinatarios separados por comas
 
 @app.route('/api/enviarcorreo', methods=['POST'])
@@ -52,10 +51,10 @@ def sendMailUsingSendGrid():
         return jsonify({'error': 'Todos los campos son requeridos.'}), 400
 
     # Verificar los valores necesarios
-    if API and from_email and len(to_emails) > 0:
+    if API and email and len(to_emails) > 0:
         message = Mail(
-            from_email,
-            to_emails=email,
+            email,
+            to_emails,
             subject=asunto,
             plain_text_content=f'Nombre: {nombre}\nNúmero de teléfono: {numtelefono}\n\n{contexto}'
         )
