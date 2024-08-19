@@ -5,8 +5,8 @@
       { "src": "Backend/app.py", "use": "@vercel/python" }
     ],
     "routes": [
-      { "source": "/api/(.*)", "destination": "/Backend/app.py" },
-      { "source": "/(.*)", "destination": "/src/index.html" }
+      { "src": "/api/(.*)", "destination": "/Backend/app.py" },
+      { "src": "/(.*)", "destination": "/src/index.html" }
     ],
     "cleanUrls": true,
     "trailingSlash": false
