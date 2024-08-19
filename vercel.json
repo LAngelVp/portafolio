@@ -1,7 +1,7 @@
 {
     "version": 2,
     "builds": [
-      { "src": "package.json", "use": "@vercel/build" },
+      { "src": "package.json", "use": "@vercel/static-build" },
       { "src": "Backend/app.py", "use": "@vercel/python" }
     ],
     "rewrites": [
@@ -11,3 +11,4 @@
     "cleanUrls": true,
     "trailingSlash": false
   }
+  
