@@ -1,12 +1,27 @@
 {
     "version": 2,
     "builds": [
-      { "src": "package.json", "use": "@vercel/static-build" },
-      { "src": "Backend/app.py", "use": "@vercel/python" }
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist/portafolio"
+        }
+      },
+      {
+        "src": "Backend/app.py",
+        "use": "@vercel/python"
+      }
     ],
     "routes": [
-      { "src": "/api/(.*)", "destination": "/Backend/app.py" },
-      { "src": "/(.*)", "destination": "/portafolio/browser/index" }
+      {
+        "src": "/api/(.*)",
+        "dest": "/Backend/app.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/dist/portafolio/index.html"
+      }
     ],
     "cleanUrls": true,
     "trailingSlash": false
