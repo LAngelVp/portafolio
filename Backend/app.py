@@ -6,7 +6,7 @@ from flask_cors import CORS
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-# Desactivar la verificación del certificado SSL (solo para desarrollo)
+# Configuración de SSL para desarrollo (desactivar la verificación del certificado)
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Configuración de Flask
@@ -57,12 +57,10 @@ def send_mail():
             response = sg.send(message)
             return jsonify({'message': 'Correo enviado exitosamente'}), response.status_code
         except Exception as e:
+            # Registrar el error
             print(f"Error al enviar el correo: {e}")
             return jsonify({'error': f'Error al enviar correo: {str(e)}'}), 500
     else:
         print("Faltan datos para enviar el correo.")
         return jsonify({'error': 'Faltan datos para enviar el correo.'}), 400
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
