@@ -39,10 +39,10 @@ def send_mail():
             )
             sg = SendGridAPIClient(API)
             response = sg.send(message)
-            return jsonify({'message': 'Correo enviado exitosamente'}), response.status_code
-        else:
-            raise ValueError("Configuración de APIKEY o destinatario faltante")
-
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+            return jsonify({"message": "Correo enviado exitosamente"}), 200
     except Exception as e:
-        print(f"Error al enviar el correo: {str(e)}")
-        return jsonify({'error': f'Error al enviar correo: {str(e)}'}), 500
+        print(f"Error al enviar correo: {e}")
+        return jsonify({"error": str(e)}), 500
