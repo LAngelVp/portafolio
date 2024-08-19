@@ -7,10 +7,6 @@
     "rewrites": [
       { "source": "/api/(.*)", "destination": "/Backend/app.py" },
       { "source": "/(.*)", "destination": "/portafolio/browser/index.html" }
-    ],
-    "routes": [
-      { "src": "/api/(.*)", "dest": "/Backend/app.py" },
-      { "src": "/(.*)", "dest": "/portafolio/browser/$1" } 
     ]
   }
   
