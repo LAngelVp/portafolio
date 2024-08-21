@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './domains/pages/home/home.component';
-import { FooterComponent } from './domains/components/footer/footer.component';
 import { BarraNavegacionComponent } from './domains/shared/barra-navegacion/barra-navegacion.component';
 import { routes } from './app.routes';
 

@@ -5,19 +5,19 @@
             <div class="contenedor_texto">
                 <div class="">
                     <div class="contenedor_contenido_texto">
-                        <p class="righteous text-3xl text-center my-2 text-white">
+                        <p class="righteous text-3xl md:text-4xl xl:text-5xl text-center my-2 text-white">
                             {{item.titulo}}
                         </p>
-                        <p class="righteous text-xl text-center opacity-80 subtitulo_color">
+                        <p class="righteous text-xl md:text-2xl xl:text-3xl text-center opacity-80 subtitulo_color">
                             {{item.subtitulo}}
                         </p>
-                        <p class="ubuntu_2 text-lg my-2 text-justify text-white">
+                        <p class="ubuntu_2 text-lg md:text-xl xl:text-2xl my-2 text-justify text-white">
                             {{item.description}}
                         </p>
                     </div>
                     <div class="relative flex justify-end">
                         <button class="btn_color mt-5 rounded lg:sombra_caja hover:bg-blue-700">
-                            <a class="righteous text-white text-md tracking-widest">
+                            <a [routerLink]="item.btn_mas"  class="righteous text-white text-md md:text-lg xl:text-xl tracking-widest">
                                 Saber más
                             </a>
                         </button>

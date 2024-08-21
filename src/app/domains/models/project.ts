@@ -5,4 +5,5 @@ export interface Project {
     enterprise : string;
     image : string;
     image_descrip : string;
+    btn_mas : string;
 }

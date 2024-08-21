@@ -59,4 +59,10 @@ border-radius: 8px;
 box-shadow: 0 2px 30px var(--colorVerdeOscuro);
 max-height: 80vh;
 overflow-y: auto;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+.contenedorPop::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
