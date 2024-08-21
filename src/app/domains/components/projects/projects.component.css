@@ -1,4 +1,4 @@
-.fondo{
+/* .fondo{
     background-color: var(--colorFondo);
 }
 .contenido{
@@ -7,9 +7,78 @@
 }
 .contenedor_targeta{
     background-color: var(--colorContenedor);
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 .btn{
     
-}
+} */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    position: relative;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100lvh;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .anterior {
+    left: 10px;
+  }
+  
+  .siguiente {
+    right: 10px;
+  }
+  .subtitulo_color{
+    color: var(--grisClaro);
+  }
+  .contenedor_texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .contenedor_contenido_texto{
+    background-color: var(--colorFondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 20px;
+    opacity: 85%;
+    border-radius: 10px;
+    box-shadow: 10px 0px 40px var(--colorVerdeOscuro);
+
+  }

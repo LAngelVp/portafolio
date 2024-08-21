@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 
 
@@ -10,7 +10,7 @@ import { Project } from '../../models/project';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
   arrayProjects : Project[] = [
     {
       titulo : 'Programación',
@@ -37,5 +37,35 @@ export class ProjectsComponent {
       image_descrip : ''
     }
   ]
+
+
+  currentIndex = 0;
+  interval: any;
+
+  ngOnInit() {
+    this.startAutoSlide();
+  }
+
+  startAutoSlide() {
+    this.interval = setInterval(() => {
+      this.siguiente_slide();
+    }, 10000);
+  }
+
+  stopAutoSlide() {
+    clearInterval(this.interval);
+  }
+
+  anterior_slide() {
+    this.stopAutoSlide();
+    this.currentIndex = (this.currentIndex > 0) ? this.currentIndex - 1 : this.arrayProjects.length - 1;
+    this.startAutoSlide();
+  }
+
+  siguiente_slide() {
+    this.stopAutoSlide();
+    this.currentIndex = (this.currentIndex + 1) % this.arrayProjects.length;
+    this.startAutoSlide();
+  }
 
 }

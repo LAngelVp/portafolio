@@ -87,7 +87,7 @@
   background: #bbc4c2;
 }
 .subtitulo_color{
-  color: #002e98;
+  color: var(--gris);
 }
 .btn_color{
   background: #003d83;

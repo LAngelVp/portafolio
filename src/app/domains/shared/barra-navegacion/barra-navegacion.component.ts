@@ -25,15 +25,15 @@ export class BarraNavegacionComponent {
       direction : ''
     },
     {
-      name : 'About',
+      name : 'Acerca',
       direction : '/about'
     },
     {
-      name : 'Projects',
+      name : 'Proyectos',
       direction : '/projects'
     },
     {
-      name : 'Contact',
+      name : 'Contacto',
       direction : '/contact'
     },
   ] 
