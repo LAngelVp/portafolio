@@ -1,5 +1,0 @@
-flask
-Flask-Mail 
-Flask-Cors
-sendgrid
-python-dotenv
