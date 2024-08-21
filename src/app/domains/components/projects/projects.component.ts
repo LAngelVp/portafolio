@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit {
     {
       titulo : 'Analisis de datos',
       subtitulo : 'Desarrollo de Soluciones Digitales Personalizadas',
-      description : 'Entiendo que cada negocio es único, y me dedico a desarrollar aplicaciones a la medida que se adaptan perfectamente a tus necesidades y objetivos. Trabajemos juntos para transformar tus ideas en soluciones digitales innovadoras y eficientes. Con un enfoque colaborativo y una pasión por la tecnología, estoy aquí para asegurarme de que cada paso del camino sea fluido y exitoso. ¡Hablemos sobre cómo podemos hacer crecer tu negocio con tecnología a medida!',
+      description : 'Entiendo que cada negocio es único, y me dedico a desarrollar aplicaciones a la medida que se adaptan perfectamente a tus necesidades y objetivos. Trabajemos juntos para transformar tus ideas en soluciones digitales innovadoras y eficientes. Con un enfoque colaborativo y una pasión por la tecnología, estoy aquí para asegurarme de que cada paso del camino sea fluido y exitoso.',
       enterprise : '',
       image : "../../../../assets/images/AnalisisDatos.jpg",
       image_descrip : ''

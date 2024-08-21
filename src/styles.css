@@ -136,12 +136,4 @@
     opacity: 1;
   }
 }
-.contenedor_aparicion{
-  background-color: var(--colorContenedor);
-  border-radius: 15px;
-  animation-name: animacion_aparicion;
-  animation-duration: 3s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;  
-}
+

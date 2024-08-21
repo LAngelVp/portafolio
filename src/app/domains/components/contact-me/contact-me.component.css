@@ -12,6 +12,16 @@
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    max-height: 80lvh;
+    max-height: 70lvh;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar {
+    width: 0; /* Oculta la barra de desplazamiento vertical */
+    height: 0; /* Oculta la barra de desplazamiento horizontal */
+}
+.btnOscuro:active{
+    background-color: var(--colorVerdeOscuro);
+    color: var(--grisClaro);
 }
