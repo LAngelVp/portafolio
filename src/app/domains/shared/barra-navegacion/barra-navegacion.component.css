@@ -5,7 +5,6 @@
     animation-duration: 1.5s;
     animation-direction: alternate;
     animation-timeline: var();
-    width: 80%;
 }
 .colorLetras {
     position: relative;
