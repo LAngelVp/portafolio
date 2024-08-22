@@ -1,0 +1,55 @@
+.contenedor_header{
+  box-shadow: 0px 10px 15px rgba(250, 250, 250, 0.3);
+}
+.contenedor_areas:nth-child(even){
+    view-timeline-name: --image ;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: contenedor_areas_izquierda;
+    animation-range: entry 25% cover 35%;
+    animation-fill-mode: both;
+}
+.contenedor_areas:nth-child(odd){
+    view-timeline-name: --image ;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: contenedor_areas_derecha;
+    animation-range: entry 25% cover 35%;
+    animation-fill-mode: both;
+}
+.contenedor_areas:nth-child(odd) > .contenedor_img{
+    order: 0;
+}
+.contenedor_areas:nth-child(odd) > .contenedor_texto{
+    order: 1;
+}
+.contenedor_areas:nth-child(odd) > div > div > .texto1_contenedor{
+    text-align: end;
+}
+.contenedor_areas:nth-child(odd) > div > div > .texto2_contenedor{
+    text-align: end;
+}
+@keyframes contenedor_areas_izquierda {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+        width: 100%;
+    }
+}
+@keyframes contenedor_areas_derecha {
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+        width: 100%;
+    }
+}

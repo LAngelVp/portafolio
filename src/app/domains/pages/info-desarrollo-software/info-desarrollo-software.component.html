@@ -1,18 +1,18 @@
 <div class="bg-black pt-20">
     <div class="container m-auto">
-        <div class="relative flex justify-center md:grid md:grid-cols-2 min-h-96">
+        <div class="relative flex justify-center md:grid md:grid-cols-2 min-h-96 contenedor_header">
             <div class="absolute flex w-11/12  gap-3 z-10 flex-col bg-black bg-opacity-70 rounded p-5 md:relative">
                 <h3 class=" text-white animate-fade animate-delay-[1000ms] righteous text-3xl md:text-4xl xl:text-6xl">
                     Desarrollo de software
                 </h3>
-                <p>
-                    <span class=" text-white ubuntu animate-fade animate-delay-[1500ms] text-lg d:text-xl xl:text-2xl">
+                <p class="text-white ubuntu animate-fade animate-delay-[1500ms] text-lg d:text-xl xl:text-2xl">
+                    <cite>
                         El desarrollo de software transforma tus ideas en soluciones innovadoras que optimizan procesos y impulsan el éxito. Con nuestras herramientas personalizadas, mantente a la vanguardia y aprovecha cada oportunidad en un mundo tecnológico en constante evolución.
-                    </span>
+                    </cite>
                 </p>
                 <div class="w-full flex justify-end mt-4">
                     <button class="btn_color p-2 rounded-tr-lg rounded-bl-lg hover:bg-blue-700 animate-fade animate-delay-[1500ms]">
-                        <a href="" class="text-white text-sm md:text-lg">
+                        <a href="" class="text-white font-bold text-sm md:text-lg">
                             Descubre Nuestros Servicios
                         </a>
                     </button>
@@ -22,6 +22,34 @@
                 <img [src]="img1" alt="programacion" class="block imagen1 animate-fade animate-delay-1000">
             </div>
         </div>
-        
+        <div class=" mt-10">
+            <div class="flex flex-col gap-3 text-center mx-4 mb-4 animate-fade-right animate-delay-[2000ms]">
+                <h2 class="text-white righteous text-3xl md:text-4xl xl:text-5xl ">
+                    Importancia del desarrollo
+                </h2>
+                <p class="text-white ubuntu_2 text-lg md:text-xl xl:text-2xl">
+                    Descubre cómo el software transforma tu negocio: automatiza finanzas, contabilidad y logística, reduce errores y mejora la eficiencia. Impulsa tu crecimiento y mantente competitivo con soluciones inteligentes.
+                </p>
+            </div>
+            <ul class="flex flex-col gap-7">
+                <li *ngFor="let item of areas_importantes_del_software" class="flex flex-col-reverse md:grid md:grid-cols-2 contenedor_areas">
+                    <div class="contenedor_texto">
+                        <div class="flex flex-col gap-3 p-5">
+                            <h2 class="texto1_contenedor righteous text-white text-2xl">
+                                {{item.nombre}}
+                            </h2>
+                            <p class="texto2_contenedor ubuntu text-white text-lg">
+                                <cite>
+                                    {{item.descripcion}}
+                                </cite>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contenedor_img">
+                        <img [src]="item.imagen" alt="imagen" class="flex max-h-80 w-full">
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
