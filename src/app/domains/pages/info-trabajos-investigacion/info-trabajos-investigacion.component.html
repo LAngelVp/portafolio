@@ -1,6 +1,6 @@
 <div class="bg-black pt-20">
     <div class="container m-auto">
-        <div class="relative flex justify-center md:grid md:grid-cols-2 min-h-96 contenedor_header">
+        <div class="relative flex justify-center items-center md:grid md:grid-cols-2 min-h-96 max-h-3/12 contenedor_header">
             <div class="absolute flex w-11/12  gap-3 z-10 flex-col bg-black bg-opacity-70 rounded p-5 md:relative">
                 <h3 class=" text-white animate-fade animate-delay-[1000ms] righteous text-3xl md:text-4xl xl:text-6xl">
                     {{titulo}}
@@ -14,10 +14,11 @@
                     <app-btn-llamada-acion/>
                 </div>
             </div>
-            <div class="relative flex">
-                <img [src]="img1" alt="programacion" class="block imagen1 animate-fade animate-delay-1000">
+            <div class="relative flex justify-center w-full max-w-6/12">
+                <img [src]="img1" alt="programacion" class="flex w-5/12 object-fixed imagen1 animate-fade animate-delay-1000">
             </div>
         </div>
+
         <div class=" mt-10">
             <div class="flex flex-col gap-3 text-center mx-4 mb-4 animate-fade-right animate-delay-[2000ms]">
                 <h2 class="text-white righteous text-3xl md:text-4xl xl:text-5xl ">
@@ -42,7 +43,7 @@
                         </div>
                     </div>
                     <div class="contenedor_img">
-                        <img [src]="item.imagen" alt="imagen" class="flex max-h-80 w-full h-full ">
+                        <img [src]="item.imagen" alt="imagen" class="flex max-h-80 w-full h-full">
                     </div>
                 </li>
             </ul>

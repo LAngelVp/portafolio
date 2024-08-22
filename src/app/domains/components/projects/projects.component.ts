@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
       enterprise : '',
       image : "../../../../assets/images/Desarrollo.jpg",
       image_descrip: '',
-      btn_mas : '/desarrollo-software'
+      btn_mas : '/projects/desarrollo-software'
     },
     {
       titulo : 'Tareas y trabajos',
@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit {
       enterprise : '',
       image : "../../../../assets/images/trabajos_investigacion.jpg",
       image_descrip: '',
-      btn_mas : '/trabajos-redaccion'
+      btn_mas : '/projects/trabajos-investigacion'
     },
     {
       titulo : 'Analisis de datos',
@@ -38,7 +38,7 @@ export class ProjectsComponent implements OnInit {
       enterprise : '',
       image : "../../../../assets/images/AnalisisDatos.jpg",
       image_descrip: '',
-      btn_mas : '/analisis-datos'
+      btn_mas : '/projects/analisis-datos'
     }
   ]
 

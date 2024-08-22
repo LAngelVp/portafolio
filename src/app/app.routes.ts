@@ -8,6 +8,7 @@ import { ContactMeComponent } from './domains/components/contact-me/contact-me.c
 import { TimelineComponent } from './domains/components/timeline/timeline.component';
 import { NgModule } from '@angular/core';
 import { InfoDesarrolloSoftwareComponent } from './domains/pages/info-desarrollo-software/info-desarrollo-software.component';
+import { InfoTrabajosInvestigacionComponent } from './domains/pages/info-trabajos-investigacion/info-trabajos-investigacion.component';
 
 
 export const routes: Routes = [
@@ -30,8 +31,12 @@ export const routes: Routes = [
         component: ContactMeComponent
     },
     {
-        path: 'desarrollo-software',
+        path: 'projects/desarrollo-software',
         component: InfoDesarrolloSoftwareComponent
+    },
+    {
+        path: 'projects/trabajos-investigacion',
+        component: InfoTrabajosInvestigacionComponent
     },
     {
         path: '**',

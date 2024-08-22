@@ -1,14 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { BtnLlamadaAcionComponent } from '../../shared/btn-llamada-acion/btn-llamada-acion.component';
 
 @Component({
   selector: 'app-info-desarrollo-software',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BtnLlamadaAcionComponent],
   templateUrl: './info-desarrollo-software.component.html',
   styleUrl: './info-desarrollo-software.component.css'
 })
 export class InfoDesarrolloSoftwareComponent {
+  titulo: string = 'Desarrollo de software';
+  descripcion : string = 'El desarrollo de software transforma tus ideas en soluciones innovadoras que optimizan procesos y impulsan el éxito. Con nuestras herramientas personalizadas, mantente a la vanguardia y aprovecha cada oportunidad en un mundo tecnológico en constante evolución.';
+  subtitulo : string = 'Importancia del desarrollo';
+  descripcion_subtitulo : string = 'Descubre cómo el software transforma tu negocio: automatiza finanzas, contabilidad y logística, reduce errores y mejora la eficiencia. Impulsa tu crecimiento y mantente competitivo con soluciones inteligentes.';
   img1 = '../../../../assets/images/programacion1.png';
 
   areas_importantes_del_software = [
