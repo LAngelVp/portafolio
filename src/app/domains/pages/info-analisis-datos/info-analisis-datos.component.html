@@ -1,1 +1,34 @@
-<p>info-analisis-datos works!</p>
+<div class="bg-black pt-20">
+    <div class="container m-auto">
+        <div class="relative flex justify-center md:grid md:grid-cols-2 min-h-96 contenedor_header">
+            <div class="absolute flex w-11/12  gap-3 z-10 flex-col bg-black bg-opacity-70 rounded p-5 md:relative">
+                <h3 class=" text-white animate-fade animate-delay-[1000ms] righteous text-3xl md:text-4xl xl:text-6xl">
+                    {{titulo}}
+                </h3>
+                <p class="text-white ubuntu animate-fade animate-delay-[1500ms] text-lg d:text-xl xl:text-2xl">
+                    <cite>
+                        {{descripcion}}
+                    </cite>
+                </p>
+                <div class="w-full flex justify-end mt-4">
+                    <app-btn-llamada-acion/>
+                </div>
+            </div>
+            <div class="relative flex">
+                <img [src]="img1" alt="programacion" class="block imagen1 animate-fade animate-delay-1000">
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div *ngFor="let item of lista_etl" class="carousel-item">
+                    <img [src]="item.imagen" alt="imagen" class="carousel-image">
+                    <div class="carousel-overlay">
+                        <h2>{{item.titulo}}</h2>
+                        <p>{{item.detalles}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

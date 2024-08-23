@@ -38,7 +38,7 @@ export class ProjectsComponent implements OnInit {
       enterprise : '',
       image : "../../../../assets/images/AnalisisDatos.jpg",
       image_descrip: '',
-      btn_mas : '/projects/analisis-datos'
+      btn_mas : '/projects/analisis-de-datos'
     }
   ]
 

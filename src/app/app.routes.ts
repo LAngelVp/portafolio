@@ -9,6 +9,7 @@ import { TimelineComponent } from './domains/components/timeline/timeline.compon
 import { NgModule } from '@angular/core';
 import { InfoDesarrolloSoftwareComponent } from './domains/pages/info-desarrollo-software/info-desarrollo-software.component';
 import { InfoTrabajosInvestigacionComponent } from './domains/pages/info-trabajos-investigacion/info-trabajos-investigacion.component';
+import { InfoAnalisisDatosComponent } from './domains/pages/info-analisis-datos/info-analisis-datos.component';
 
 
 export const routes: Routes = [
@@ -37,6 +38,10 @@ export const routes: Routes = [
     {
         path: 'projects/trabajos-investigacion',
         component: InfoTrabajosInvestigacionComponent
+    },
+    {
+        path: 'projects/analisis-de-datos',
+        component: InfoAnalisisDatosComponent
     },
     {
         path: '**',
