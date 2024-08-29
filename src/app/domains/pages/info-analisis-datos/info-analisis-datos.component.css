@@ -1,9 +1,21 @@
 .contenedor_carrusel{
-    display: block;
     position: relative;
-    min-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0,1fr));
+    position: relative;
+}
+@media (min-width: 768px) {
+    .contenedor_carrusel{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
 }
 @media (min-width: 1024px) {
+    .contenedor_carrusel{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0,1fr));
+        position: relative;
+    }
     .contenedor_texto_carrusel{
         display: flex;
         flex-direction: column;
