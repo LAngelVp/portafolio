@@ -1,0 +1,30 @@
+<div class="flex flex-wrap flex-1 gap-5 justify-center">
+    <div *ngFor="let proyecto of lista_proyectos" class="card relative h-full rounded-xl">
+        <img [src]="proyecto.img" alt="" class="card-img-top rounded-t-xl">
+        <div class="p-2 flex flex-col gap-2 h-full justify-between">
+            <h5 class="righteous font-bold text-center text-3xl xl:text-3xl">
+                {{proyecto.titulo | uppercase}}
+            </h5>
+            <div class=" contenedor_descripcion">
+                <p class="ubuntu card-text text-md xl:text-lg">
+                    {{proyecto.descripcion}}
+                </p>
+            </div>
+            <ul class="flex gap-4 flex-wrap">
+                <li *ngFor="let tecnologia of proyecto.tecnologias" class="righteous contenedor_tecnologia px-3 rounded-lg text-lg m-0">
+                    {{tecnologia.nombre | uppercase}}
+                </li>
+            </ul>
+            <div class="flex gap-2 justify-end w-full">
+                <a [href]="proyecto.url_proyecto_github" target="_blank" class="flex btn_verde px-2 py-1 rounded-xl">
+                    <img [src]="proyecto.img_github" alt="" class=" w-5 me-1">
+                    Repositorio
+                </a>
+                <a [href]="proyecto.url_proyecto_web" target="_blank" class="flex btn_verde px-2 py-1 rounded-xl">
+                    <img [src]="proyecto.img_vista" alt="" class=" w-5 me-1">
+                    Ver
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

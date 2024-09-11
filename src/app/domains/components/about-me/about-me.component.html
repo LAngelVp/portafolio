@@ -1,49 +1,66 @@
 <div class="bg-black w-full relative  grid grid-cols-1 justify-center items-center z-0">
-    <div class="relative h-full md:h-lvh  pt-20  parallax-bg">
-        <div class="relative flex justify-center items-center container min-w-full py-7 md:hidden">
-            <div class="contenedor_infografia w-10/12 p-5 mx-2">
-                <h3 class="text-2xl poetsen text-white">
-                    Descripción
-                </h3>
-                <img [src]="image" alt="foto" class="float-right w-32 rounded-lg mx-2 mt-2">
-                <p class="ubuntu text-justify text-md text-white">
-                    {{description_personal}}
-                </p>
+    <div class="container mx-auto">
+        <div class="relative h-full md:h-lvh  pt-20  parallax-bg">
+            <div class="relative flex justify-center items-center container min-w-full py-7 md:hidden">
+                <div class="contenedor_infografia w-10/12 p-5 mx-2">
+                    <h3 class="text-2xl poetsen text-white">
+                        Descripción
+                    </h3>
+                    <img [src]="image" alt="foto" class="float-right w-32 rounded-lg mx-2 mt-2">
+                    <p class="ubuntu text-justify text-md text-white">
+                        {{description_personal}}
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 justify-center items-center h-full">
+                <div class="hidden md:flex flex-col min-w-1/2 contenedor_infografia p-5 mx-10">
+                    <h3 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl  cinzel text-white font-bold mb-3">
+                        Descripción
+                    </h3>
+                    <p class="ubuntu text-justify text-sm md:text-base lg:text-xl text-white">
+                        {{description_personal}}
+                    </p>
+                </div>
+                <div class="hidden md:flex min-w-1/2 justify-center items-center">
+                    <img [src]="image2" alt="foto" class="block w-2/3 rounded-full animate-jump animate-delay-[2000ms] animate-duration-[2500ms] animate-fill-both max-h-1/2">
+                </div>
             </div>
         </div>
-        <div class="grid grid-cols-2 justify-center items-center h-full">
-            <div class="hidden md:flex flex-col min-w-1/2 contenedor_infografia p-5 mx-10">
-                <h3 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl  cinzel text-white font-bold mb-3">
-                    Descripción
-                </h3>
-                <p class="ubuntu text-justify text-sm md:text-base lg:text-xl text-white">
-                    {{description_personal}}
-                </p>
-            </div>
-            <div class="hidden md:flex min-w-1/2 justify-center items-center">
-                <img [src]="image2" alt="foto" class="block w-2/3 rounded-full animate-jump animate-delay-[2000ms] animate-duration-[2500ms] animate-fill-both max-h-1/2">
-            </div>
-        </div>
-    </div>
-    <div class="">
-        <app-tools-used/>
-    </div>
-    <div class="contenedor_experiencia_laboral">
+    
+        <!---- HERRAMIENTAS TRABAJADAS -->
         <div class="">
-            <div class="contenedor_experiencia flex flex-col justify-center items-center">
-                <h2 class="texto_experiencia text-2xl lg:text-4xl text-center ubuntu_2">
-                    Trabajos con el transcurso del tiempo
-                </h2>
-                <p class="texto_experiencia text-center py-3 ubuntu text-base lg:text-xl">
-                    Un recorrido visual por mi trayectoria profesional: cada paso, un nuevo desafío superado y un logro alcanzado. Descubre cómo mi experiencia ha evolucionado a lo largo del tiempo.
-                </p>
+            <app-tools-used/>
+        </div>
+    
+        <!---- EXPERIENCIA LABORAL -->
+        <div class="contenedor_experiencia_laboral">
+            <div class="">
+                <div class="contenedor_experiencia flex flex-col justify-center items-center">
+                    <h2 class="texto_experiencia text-2xl lg:text-4xl text-center ubuntu_2">
+                        Trabajos con el transcurso del tiempo
+                    </h2>
+                    <p class="texto_experiencia text-center py-3 ubuntu text-base lg:text-xl">
+                        Un recorrido visual por mi trayectoria profesional: cada paso, un nuevo desafío superado y un logro alcanzado. Descubre cómo mi experiencia ha evolucionado a lo largo del tiempo.
+                    </p>
+                </div>
+            </div>
+            <div class="contenedor_timeline">
+                <app-timeline (showPopUp)="handlePopUp($event)"/>
             </div>
         </div>
-        <div class="contenedor_timeline">
-            <app-timeline (showPopUp)="handlePopUp($event)"/>
+    
+        <!---- PROYECTOS -->
+        <div class="contenedor_proyectos">
+            <h2 class=" colorTexto text-2xl cinzel font-bold text-center md:text-start md:text-3xl xl:text-4xl mb-5 p-0 text my-7">
+                Proyectos
+            </h2>
+            <div class="flex flex-wrap justify-center pb-7">
+                <app-proyectos/>
+            </div>
         </div>
     </div>
 </div>
+
 <div *ngIf="showPopupItem" class="popup fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50" (click)="closePopUp()">
     <div class="contenedorPop p-4 border rounded shadow-lg" (click)="$event.stopPropagation()">
       <h2 class="text-black text-xl md:text-2xl lg:text-4xl font-bold righteous">{{showPopupItem.puesto}}</h2>
@@ -84,4 +101,4 @@
         Cerrar
       </button>
     </div>
-  </div>
+</div>

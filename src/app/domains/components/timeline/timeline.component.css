@@ -79,8 +79,8 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 40%;
-    background-color: var(--gris);
+    width: 40%; 
+    background-color: var(--grisClaro);
     box-shadow: 0px 10px 40px var(--colorVerdeOscuro);
     border-radius: 1rem;
     padding: 1rem;

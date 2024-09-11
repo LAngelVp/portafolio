@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ToolsUsedComponent } from '../tools-used/tools-used.component';
 import { CommonModule } from '@angular/common';
 import { TimelineComponent } from '../timeline/timeline.component';
+import { ProyectosComponent } from "../proyectos/proyectos.component";
 
 @Component({
   selector: 'app-about-me',
@@ -9,8 +10,9 @@ import { TimelineComponent } from '../timeline/timeline.component';
   imports: [
     ToolsUsedComponent,
     CommonModule,
-    TimelineComponent
-  ],
+    TimelineComponent,
+    ProyectosComponent
+],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'
 })

@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { InfoDesarrolloSoftwareComponent } from './domains/pages/info-desarrollo-software/info-desarrollo-software.component';
 import { InfoTrabajosInvestigacionComponent } from './domains/pages/info-trabajos-investigacion/info-trabajos-investigacion.component';
 import { InfoAnalisisDatosComponent } from './domains/pages/info-analisis-datos/info-analisis-datos.component';
+import { ProyectosComponent } from './domains/components/proyectos/proyectos.component';
 
 
 export const routes: Routes = [
@@ -42,6 +43,10 @@ export const routes: Routes = [
     {
         path: 'projects/analisis-de-datos',
         component: InfoAnalisisDatosComponent
+    },
+    {
+        path: 'p',
+        component: ProyectosComponent
     },
     {
         path: '**',

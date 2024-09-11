@@ -1,0 +1,29 @@
+.btn_verde{
+    background-color: var(--colorVerdeClaro);
+}
+.card{
+    width: 20rem;
+    box-shadow: 0px 0px 10px rgba(172, 255, 47, 0.63);
+    background-color: white;
+    height: 600px;
+    max-height: 600PX;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_descripcion{
+    width: 100%; /* Ajusta el contenedor al ancho de la tarjeta */
+    max-width: 100%; /* Asegura que el texto no exceda el contenedor */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis; /* Agrega '...' al final del texto truncado */
+    font-size: 16px;
+    min-height: 50px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Número máximo de líneas visibles */
+    -webkit-box-orient: vertical; /* Define la orientación del contenedor de texto */
+    line-height: 1.5; /* Ajusta el interlineado */
+    box-sizing: border-box;
+}
+.contenedor_tecnologia{
+    background-color: var(--gris);
+}
