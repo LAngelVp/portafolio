@@ -21,8 +21,8 @@ export class GeneradorQRComponent {
 
   ngAfterViewInit() {
     this.qrCode = new QRCodeStyling({
-      width: 300,
-      height: 300,
+      width: 600,
+      height: 600,
       type: 'canvas',
       data: '',
       image: '',
@@ -32,7 +32,8 @@ export class GeneradorQRComponent {
       },
       imageOptions: {
         crossOrigin: 'anonymous',
-        margin: 10
+        margin: 5,
+        imageSize: 0.2, 
       }
     });
 
