@@ -1,0 +1,65 @@
+import { CommonModule } from '@angular/common';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import QRCodeStyling from 'qr-code-styling';
+
+@Component({
+  selector: 'app-generador-qr',
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
+  templateUrl: './generador-qr.component.html',
+  styleUrl: './generador-qr.component.css'
+})
+export class GeneradorQRComponent {
+@ViewChild('qrContainer', { static: true }) qrContainer!: ElementRef;
+  url: string = '';
+  logoDataUrl: string = '';
+  qrCode!: QRCodeStyling;
+
+  ngAfterViewInit() {
+    this.qrCode = new QRCodeStyling({
+      width: 300,
+      height: 300,
+      type: 'canvas',
+      data: '',
+      image: '',
+      dotsOptions: {
+        color: '#000',
+        type: 'rounded'
+      },
+      imageOptions: {
+        crossOrigin: 'anonymous',
+        margin: 10
+      }
+    });
+
+    this.qrCode.append(this.qrContainer.nativeElement);
+  }
+
+  generarQR() {
+    this.qrCode.update({
+      data: this.url,
+      image: this.logoDataUrl || ''
+    });
+  }
+
+  onLogoSelected(event: any) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.logoDataUrl = reader.result as string;
+    };
+    reader.readAsDataURL(file);
+  }
+  exportarQR() {
+  this.qrCode.download({
+    name: 'qr-code',
+    extension: 'png'
+  });
+}
+}

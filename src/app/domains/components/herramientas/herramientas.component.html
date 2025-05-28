@@ -1,0 +1,16 @@
+<div class="flex flex-wrap gap-5 justify-center pt-24">
+  <div *ngFor="let herramienta of lista_herramientas"
+       class="flex flex-col gap-4 max-w-52 cristal p-3">
+    <h2 class="text-xl ubuntu text-center">{{ herramienta.nombre }}</h2>
+    <cite>{{ herramienta.descripcion }}</cite>
+    <button (click)="abrir_herramienta(herramienta.componente)"
+            class="bg-blue-400 py-1 px-2 rounded hover:bg-blue-600 font-bold text-white">
+      Abrir
+    </button>
+  </div>
+</div>
+
+<!-- Render dinámico del componente -->
+<div class="mt-10 flex justify-center">
+  <ng-container *ngIf="componente_actual" [ngComponentOutlet]="componente_actual"></ng-container>
+</div>

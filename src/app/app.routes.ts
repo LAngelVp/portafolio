@@ -11,6 +11,7 @@ import { InfoDesarrolloSoftwareComponent } from './domains/pages/info-desarrollo
 import { InfoTrabajosInvestigacionComponent } from './domains/pages/info-trabajos-investigacion/info-trabajos-investigacion.component';
 import { InfoAnalisisDatosComponent } from './domains/pages/info-analisis-datos/info-analisis-datos.component';
 import { ProyectosComponent } from './domains/components/proyectos/proyectos.component';
+import { HerramientasComponent } from './domains/components/herramientas/herramientas.component';
 
 
 export const routes: Routes = [
@@ -47,6 +48,10 @@ export const routes: Routes = [
     {
         path: 'p',
         component: ProyectosComponent
+    },
+    {
+        path: 'herramientas',
+        component: HerramientasComponent
     },
     {
         path: '**',
