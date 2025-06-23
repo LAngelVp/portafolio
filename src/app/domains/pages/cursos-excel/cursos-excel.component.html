@@ -1,0 +1,11 @@
+<div class="h-lvh imagen relative overflow-hidden pt-20">
+  
+  <!-- Contenedor scrollable de cartas -->
+  <div class="w-11/12 m-auto video-grid overflow-y-auto h-full pb-4 sin-scroll">
+    <app-carta-video
+      *ngFor="let video of videos"
+      [video]="video">
+    </app-carta-video>
+  </div>
+
+</div>

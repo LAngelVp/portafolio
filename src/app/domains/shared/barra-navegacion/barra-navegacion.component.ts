@@ -33,6 +33,10 @@ export class BarraNavegacionComponent {
       direction : '/projects'
     },
     {
+      name : 'Curso Excel',
+      direction : '/cursos-excel'
+    },
+    {
       name : 'Contacto',
       direction : '/contact'
     },

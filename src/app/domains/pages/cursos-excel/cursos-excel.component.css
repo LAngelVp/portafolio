@@ -1,0 +1,19 @@
+.imagen {
+  background-image: url(../../../../assets/images/paisaje_nocturno.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive */
+  gap: 20px; /* Espacio entre cards */
+}
+.sin-scroll {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* Internet Explorer 10+ */
+}
+
+.sin-scroll::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari y Edge */
+}
