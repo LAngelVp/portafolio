@@ -13,6 +13,7 @@ import { InfoAnalisisDatosComponent } from './domains/pages/info-analisis-datos/
 import { ProyectosComponent } from './domains/components/proyectos/proyectos.component';
 import { HerramientasComponent } from './domains/components/herramientas/herramientas.component';
 import { CursosExcelComponent } from './domains/pages/cursos-excel/cursos-excel.component';
+import { CursosComponent } from './domains/pages/cursos/cursos.component';
 
 
 export const routes: Routes = [
@@ -47,7 +48,11 @@ export const routes: Routes = [
         component: InfoAnalisisDatosComponent
     },
     {
-        path: 'cursos-excel',
+        path: 'cursos',
+        component: CursosComponent
+    },
+    {
+        path: 'cursos/fundamentos-excel',
         component: CursosExcelComponent
     },
     {
