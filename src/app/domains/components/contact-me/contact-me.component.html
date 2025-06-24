@@ -4,43 +4,103 @@
             Enviar Mensaje
         </h2>
         <div class="m-4">
-            <form (ngSubmit)="enviarmail()" [formGroup]="formulario">
+            <form (ngSubmit)="enviarmail()" [formGroup]="formulario" novalidate>
+                <!-- Nombre -->
                 <div class="flex flex-col">
-                    <label for="nombre" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
-                        Nombre:
-                    </label>
-                    <input id="nombre" formControlName="nombre" type="text" placeholder="Nombre completo" class=" border border-green-700 rounded ps-2">
+                    <label for="nombre" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">Nombre:</label>
+                    <input id="nombre" formControlName="nombre" type="text" placeholder="Nombre completo"
+                        class="border border-green-700 rounded ps-2"
+                        [class.border-red-600]="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched" />
+                    <p *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        El nombre es obligatorio.
+                    </p>
                 </div>
-                <div class="flex flex-col">
-                    <label for="email" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
-                        Correo electronico:
-                    </label>
-                    <input id="email" formControlName="email" type="email" placeholder="ejemplo.123@gmail.com" class=" border border-green-700 rounded ps-2">
+
+                <!-- Email -->
+                <div class="flex flex-col mt-4">
+                    <label for="email" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">Correo
+                        electrónico:</label>
+                    <input id="email" formControlName="email" type="email" placeholder="ejemplo.123@gmail.com"
+                        class="border border-green-700 rounded ps-2"
+                        [class.border-red-600]="formulario.get('email')?.invalid && formulario.get('email')?.touched" />
+                    <p *ngIf="formulario.get('email')?.touched && formulario.get('email')?.errors?.['required']"
+                        class="text-red-600 text-sm mt-1">
+                        El correo es obligatorio.
+                    </p>
+                    <p *ngIf="formulario.get('email')?.touched && formulario.get('email')?.errors?.['email']"
+                        class="text-red-600 text-sm mt-1">
+                        El correo no es válido.
+                    </p>
                 </div>
-                <div class="flex flex-col">
-                    <label for="numtelefono" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
-                        Número de telefono:
-                    </label>
-                    <input id="numtelefono" formControlName="numtelefono" type="tel" placeholder="123-123-12-12" class=" border border-green-700 rounded ps-2">
+
+                <!-- Número de teléfono -->
+                <div class="flex flex-col mt-4">
+                    <label for="numtelefono" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">Número de
+                        teléfono:</label>
+                    <input id="numtelefono" formControlName="numtelefono" type="tel" placeholder="1234567890"
+                        maxlength="10" class="border border-green-700 rounded ps-2"
+                        [class.border-red-600]="formulario.get('numtelefono')?.invalid && formulario.get('numtelefono')?.touched" />
+                    <p *ngIf="formulario.get('numtelefono')?.touched && formulario.get('numtelefono')?.errors?.['required']"
+                        class="text-red-600 text-sm mt-1">
+                        El teléfono es obligatorio.
+                    </p>
+                    <p *ngIf="formulario.get('numtelefono')?.touched && formulario.get('numtelefono')?.errors?.['pattern']"
+                        class="text-red-600 text-sm mt-1">
+                        Debe contener exactamente 10 dígitos numéricos.
+                    </p>
                 </div>
-                <div class="flex flex-col">
-                    <label for="asunto" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
-                        Asunto:
-                    </label>
-                    <input id="asunto" formControlName="asunto" type="text" placeholder="Ingresar asunto" class=" border border-green-700 rounded ps-2">
+
+                <!-- Asunto -->
+                <div class="flex flex-col mt-4">
+                    <label for="asunto" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">Asunto:</label>
+                    <input id="asunto" formControlName="asunto" type="text" placeholder="Ingresar asunto"
+                        class="border border-green-700 rounded ps-2"
+                        [class.border-red-600]="formulario.get('asunto')?.invalid && formulario.get('asunto')?.touched" />
+                    <p *ngIf="formulario.get('asunto')?.invalid && formulario.get('asunto')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        El asunto es obligatorio.
+                    </p>
                 </div>
-                <div class="flex flex-col">
-                    <label for="contexto" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">
-                        Contexto:
-                    </label>
-                    <textarea id="contexto" formControlName="contexto" type="text" placeholder="Ingresa una descripción del asunto" rows="5" class=" border border-green-700 rounded ps-2"></textarea>
+
+                <!-- Contexto -->
+                <div class="flex flex-col mt-4">
+                    <label for="contexto" class="righteous text-start text-xl lg:text-2xl xl:text-3xl">Contexto:</label>
+                    <textarea id="contexto" formControlName="contexto" rows="5"
+                        placeholder="Ingresa una descripción del asunto" class="border border-green-700 rounded ps-2"
+                        [class.border-red-600]="formulario.get('contexto')?.invalid && formulario.get('contexto')?.touched"></textarea>
+                    <p *ngIf="formulario.get('contexto')?.invalid && formulario.get('contexto')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        El contexto es obligatorio y debe tener al menos 10 caracteres.
+                    </p>
                 </div>
-                <div class="flex flex-col md:items-end">
-                    <button type="submit" class="btnOscuro mt-4 py-2 px-4 text-lg  rounded md:w-3/12 xl:w-3/12 md:text-md lg:text-lg righteous tracking-[3px]">
+
+                <!-- Botón enviar -->
+                <div class="flex flex-col md:items-end mt-6">
+                    <button type="submit" [disabled]="formulario.invalid"
+                        class="btnOscuro py-2 px-4 text-lg rounded md:w-3/12 xl:w-3/12 md:text-md lg:text-lg righteous tracking-[3px] disabled:opacity-50 disabled:cursor-not-allowed">
                         Enviar
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="modalVisible" class="fixed inset-0 flex items-center justify-center z-50">
+    <!-- Fondo oscuro -->
+    <div class="absolute inset-0 bg-black opacity-50" (click)="cerrarModal()"></div>
+
+    <!-- Contenedor del modal -->
+    <div class="relative bg-white rounded-lg shadow-xl w-11/12 max-w-md p-6 animate-fade-in">
+        <h3 class="text-xl font-bold mb-2 text-center">{{ modalTitulo }}</h3>
+        <p class="text-gray-700 text-sm mb-6 text-center">{{ modalMensaje }}</p>
+
+        <div class="flex justify-center">
+            <button type="button" class="btnOscuro px-6 py-2 rounded" (click)="cerrarModal()">
+                Cerrar
+            </button>
         </div>
     </div>
 </div>

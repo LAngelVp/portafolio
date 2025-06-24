@@ -9,7 +9,6 @@ import { RouterModule, RouterOutlet } from '@angular/router';
     standalone: true,
     imports: [
         BarraNavegacionComponent,
-        HomeComponent,
         RouterOutlet,
         RouterModule
     ],
