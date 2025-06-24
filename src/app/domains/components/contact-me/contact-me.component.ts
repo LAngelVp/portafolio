@@ -1,23 +1,20 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {  FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    
-// TODO: `HttpClientModule` should not be imported into a component directly.
-// Please refactor the code to add `provideHttpClient()` call to the provider list in the
-// application bootstrap logic and remove the `HttpClientModule` import from this component.
-HttpClientModule
+    FormBuilder,
+    FormGroup
   ],
   templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.css'
+  styleUrls: ['./contact-me.component.css']
 })
-export class ContactMeComponent implements OnInit{
-  formulario: FormGroup = this.fb.group({}); // Inicializar con un formulario vacío
+export class ContactMeComponent implements OnInit {
+  formulario: FormGroup = this.fb.group({});
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 
@@ -35,20 +32,20 @@ export class ContactMeComponent implements OnInit{
     if (this.formulario.valid) {
       const emailData = this.formulario.value;
       this.http.post('https://apicorreos.vercel.app/enviarcorreo', emailData)
-        .subscribe(
-          response => {
+        .subscribe({
+          next: (response) => {
             console.log('Correo enviado exitosamente', response);
-            alert('¡El correo fue enviado de manera exitosa! \n Será contactado a su número de teléfono o correo electrónico en un lapso máximo de 24hrs.'); // Mostrar alerta de éxito
+            alert('¡El correo fue enviado de manera exitosa! \n Será contactado a su número de teléfono o correo electrónico en un lapso máximo de 24hrs.');
           },
-          error => {
+          error: (error) => {
             console.error('Error al enviar el correo', error);
             alert('Error al enviar el correo');
           }
-        );
-      } else {
-        console.error('Formulario inválido');
-        alert('La información que esta brindando no es correcta, favor de corregir los datos.');
-      }
-      this.formulario.reset(); 
+        });
+      this.formulario.reset();
+    } else {
+      console.error('Formulario inválido');
+      alert('La información que esta brindando no es correcta, favor de corregir los datos.');
+    }
   }
 }

@@ -1,20 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkWithHref, RouterModule, RouterOutlet } from '@angular/router';
 import { AboutMeComponent } from '../../components/about-me/about-me.component';
+import { CommonModule } from '@angular/common';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-barra-navegacion',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    RouterLink,
-    AboutMeComponent,
-    RouterOutlet
-  ],
-  templateUrl: './barra-navegacion.component.html',
-  styleUrl: './barra-navegacion.component.css'
+    selector: 'app-barra-navegacion',
+    imports: [
+        CommonModule,
+        RouterModule,
+        RouterLink,
+        RouterOutlet
+    ],
+    templateUrl: './barra-navegacion.component.html',
+    styleUrl: './barra-navegacion.component.css'
 })
 export class BarraNavegacionComponent {
   img_menu : string = '../../../../assets/images/burger.svg';

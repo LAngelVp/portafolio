@@ -3,14 +3,13 @@ import { Component } from '@angular/core';
 import { BtnLlamadaAcionComponent } from '../../shared/btn-llamada-acion/btn-llamada-acion.component';
 
 @Component({
-  selector: 'app-info-analisis-datos',
-  standalone: true,
-  imports: [
-    CommonModule, 
-    BtnLlamadaAcionComponent
-  ],
-  templateUrl: './info-analisis-datos.component.html',
-  styleUrl: './info-analisis-datos.component.css'
+    selector: 'app-info-analisis-datos',
+    imports: [
+        CommonModule,
+        BtnLlamadaAcionComponent
+    ],
+    templateUrl: './info-analisis-datos.component.html',
+    styleUrl: './info-analisis-datos.component.css'
 })
 export class InfoAnalisisDatosComponent {
   titulo : string = 'Analisis de datos';

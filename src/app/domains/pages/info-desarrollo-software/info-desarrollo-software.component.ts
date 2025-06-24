@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { BtnLlamadaAcionComponent } from '../../shared/btn-llamada-acion/btn-llamada-acion.component';
 
 @Component({
-  selector: 'app-info-desarrollo-software',
-  standalone: true,
-  imports: [CommonModule, BtnLlamadaAcionComponent],
-  templateUrl: './info-desarrollo-software.component.html',
-  styleUrl: './info-desarrollo-software.component.css'
+    selector: 'app-info-desarrollo-software',
+    imports: [CommonModule, BtnLlamadaAcionComponent],
+    templateUrl: './info-desarrollo-software.component.html',
+    styleUrl: './info-desarrollo-software.component.css'
 })
 export class InfoDesarrolloSoftwareComponent {
   titulo: string = 'Desarrollo de software';

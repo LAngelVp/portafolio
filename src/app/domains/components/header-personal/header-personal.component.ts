@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header-personal',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './header-personal.component.html',
-  styleUrl: './header-personal.component.css'
+    selector: 'app-header-personal',
+    imports: [CommonModule],
+    templateUrl: './header-personal.component.html',
+    styleUrl: './header-personal.component.css'
 })
 export class HeaderPersonalComponent {
   titulo:string="No te compares con nadie en este mundo. Si lo haces, te estás insultando a ti mismo."

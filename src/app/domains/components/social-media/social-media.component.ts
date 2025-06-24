@@ -1,17 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLinkWithHref } from '@angular/router';
 import { SocialMedia } from '../../models/social_media';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-social-media',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterLinkWithHref
-  ],
-  templateUrl: './social-media.component.html',
-  styleUrl: './social-media.component.css'
+    selector: 'app-social-media',
+    imports: [
+        RouterModule
+    ],
+    templateUrl: './social-media.component.html',
+    styleUrl: './social-media.component.css'
 })
 export class SocialMediaComponent {
   array_image_social_media: SocialMedia[] = [

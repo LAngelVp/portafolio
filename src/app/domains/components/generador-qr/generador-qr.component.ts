@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 import QRCodeStyling from 'qr-code-styling';
 
 @Component({
-  selector: 'app-generador-qr',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
-  templateUrl: './generador-qr.component.html',
-  styleUrl: './generador-qr.component.css'
+    selector: 'app-generador-qr',
+    imports: [
+        CommonModule,
+        FormsModule
+    ],
+    templateUrl: './generador-qr.component.html',
+    styleUrl: './generador-qr.component.css'
 })
 export class GeneradorQRComponent {
 @ViewChild('qrContainer', { static: true }) qrContainer!: ElementRef;

@@ -1,0 +1,6 @@
+.imagen_fondo{
+    background-image: url(../../../../assets/images/paisaje_natural_login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

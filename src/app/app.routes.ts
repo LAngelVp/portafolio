@@ -14,6 +14,8 @@ import { ProyectosComponent } from './domains/components/proyectos/proyectos.com
 import { HerramientasComponent } from './domains/components/herramientas/herramientas.component';
 import { CursosExcelComponent } from './domains/pages/cursos-excel/cursos-excel.component';
 import { CursosComponent } from './domains/pages/cursos/cursos.component';
+import { InicioSesionComponent } from './domains/pages/inicio-sesion/inicio-sesion.component';
+import { RegistrarseComponent } from './domains/components/registrarse/registrarse.component';
 
 
 export const routes: Routes = [
@@ -54,6 +56,14 @@ export const routes: Routes = [
     {
         path: 'cursos/fundamentos-excel',
         component: CursosExcelComponent
+    },
+    {
+        path: 'login',
+        component: InicioSesionComponent
+    },
+    {
+        path: 'registro',
+        component: RegistrarseComponent
     },
     {
         path: 'p',

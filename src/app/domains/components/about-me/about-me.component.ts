@@ -5,16 +5,15 @@ import { TimelineComponent } from '../timeline/timeline.component';
 import { ProyectosComponent } from "../proyectos/proyectos.component";
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [
-    ToolsUsedComponent,
-    CommonModule,
-    TimelineComponent,
-    ProyectosComponent
-],
-  templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.css'
+    selector: 'app-about-me',
+    imports: [
+        ToolsUsedComponent,
+        CommonModule,
+        TimelineComponent,
+        ProyectosComponent
+    ],
+    templateUrl: './about-me.component.html',
+    styleUrl: './about-me.component.css'
 })
 export class AboutMeComponent {
   carrera:string="Ingeniero en sistemas computacionales";

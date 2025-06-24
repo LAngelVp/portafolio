@@ -3,13 +3,12 @@ import { ProyectosModel } from '../../models/proyectos-model';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-proyectos',
-  standalone: true,
-  imports: [
-    CommonModule
-  ],
-  templateUrl: './proyectos.component.html',
-  styleUrl: './proyectos.component.css'
+    selector: 'app-proyectos',
+    imports: [
+        CommonModule
+    ],
+    templateUrl: './proyectos.component.html',
+    styleUrl: './proyectos.component.css'
 })
 export class ProyectosComponent {
   lista_proyectos: ProyectosModel[] = [

@@ -5,14 +5,13 @@ import { CartaVideoComponent } from '../../components/carta-video/carta-video.co
 
 
 @Component({
-  selector: 'app-cursos-excel',
-  standalone: true,
-  imports: [
-    CommonModule,
-    CartaVideoComponent
-  ],
-  templateUrl: './cursos-excel.component.html',
-  styleUrl: './cursos-excel.component.css'
+    selector: 'app-cursos-excel',
+    imports: [
+        CommonModule,
+        CartaVideoComponent
+    ],
+    templateUrl: './cursos-excel.component.html',
+    styleUrl: './cursos-excel.component.css'
 })
 export class CursosExcelComponent implements OnInit{
   videos: any[] = [];

@@ -1,0 +1,23 @@
+<div class="p-4 max-w-xl mx-auto bg-white shadow rounded space-y-3">
+    <h2 class="text-2xl font-bold">Registro de Usuario</h2>
+
+    <input [(ngModel)]="usuario.nombre" placeholder="Nombre" class="input" />
+    <input [(ngModel)]="usuario.apellido_paterno" placeholder="Apellido paterno" class="input" />
+    <input [(ngModel)]="usuario.apellido_materno" placeholder="Apellido materno" class="input" />
+    <input [(ngModel)]="usuario.email" placeholder="Email" class="input" />
+    <input [(ngModel)]="usuario.telefono" placeholder="Teléfono" class="input" />
+    <input [(ngModel)]="usuario.empresa" placeholder="Empresa" class="input" />
+    <input [(ngModel)]="usuario.ciudad" placeholder="Ciudad" class="input" />
+    <input [(ngModel)]="usuario.ocupacion" placeholder="Ocupación" class="input" />
+    <input [(ngModel)]="usuario.fecha_registro" placeholder="Fecha de registro" class="input" type="date" />
+    <input [(ngModel)]="usuario.fecha_suscripcion" placeholder="Fecha de suscripción" class="input" type="date" />
+    <select [(ngModel)]="usuario.activo" class="input">
+        <option value="" disabled selected>¿Activo?</option>
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+    </select>
+
+    <button (click)="guardar()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Guardar
+    </button>
+</div>

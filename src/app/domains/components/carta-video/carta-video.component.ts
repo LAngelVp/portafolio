@@ -3,13 +3,12 @@ import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-carta-video',
-  standalone: true,
-  imports: [
-    CommonModule
-  ],
-  templateUrl: './carta-video.component.html',
-  styleUrl: './carta-video.component.css'
+    selector: 'app-carta-video',
+    imports: [
+        CommonModule
+    ],
+    templateUrl: './carta-video.component.html',
+    styleUrl: './carta-video.component.css'
 })
 export class CartaVideoComponent {
    @Input() video: any; // Recibe el objeto video desde el padre

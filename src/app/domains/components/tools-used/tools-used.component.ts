@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-tools-used',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './tools-used.component.html',
-  styleUrl: './tools-used.component.css'
+    selector: 'app-tools-used',
+    imports: [CommonModule],
+    templateUrl: './tools-used.component.html',
+    styleUrl: './tools-used.component.css'
 })
 export class ToolsUsedComponent {
   tools_used = [

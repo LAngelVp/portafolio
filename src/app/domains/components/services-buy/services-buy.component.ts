@@ -4,11 +4,10 @@ import { ServiceInterface } from '../../models/serviceInterface';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-services-buy',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './services-buy.component.html',
-  styleUrl: './services-buy.component.css'
+    selector: 'app-services-buy',
+    imports: [CommonModule],
+    templateUrl: './services-buy.component.html',
+    styleUrl: './services-buy.component.css'
 })
 export class ServicesBuyComponent {
   array_services:ServiceInterface[]=[

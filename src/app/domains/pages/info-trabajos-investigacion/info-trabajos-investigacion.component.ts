@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { BtnLlamadaAcionComponent } from '../../shared/btn-llamada-acion/btn-llamada-acion.component';
 
 @Component({
-  selector: 'app-info-trabajos-investigacion',
-  standalone: true,
-  imports: [CommonModule, BtnLlamadaAcionComponent],
-  templateUrl: './info-trabajos-investigacion.component.html',
-  styleUrl: './info-trabajos-investigacion.component.css'
+    selector: 'app-info-trabajos-investigacion',
+    imports: [CommonModule, BtnLlamadaAcionComponent],
+    templateUrl: './info-trabajos-investigacion.component.html',
+    styleUrl: './info-trabajos-investigacion.component.css'
 })
 export class InfoTrabajosInvestigacionComponent {
   titulo : string = 'Optimizando tu trabajo';
