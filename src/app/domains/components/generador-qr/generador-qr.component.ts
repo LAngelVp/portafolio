@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import QRCodeStyling from 'qr-code-styling';
 
 @Component({
+  standalone: true,
     selector: 'app-generador-qr',
     imports: [
         CommonModule,

@@ -5,6 +5,7 @@ import { TimelineComponent } from '../timeline/timeline.component';
 import { ProyectosComponent } from "../proyectos/proyectos.component";
 
 @Component({
+  standalone: true,
     selector: 'app-about-me',
     imports: [
         ToolsUsedComponent,

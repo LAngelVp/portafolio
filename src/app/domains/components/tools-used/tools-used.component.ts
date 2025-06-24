@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
+    standalone: true,
     selector: 'app-tools-used',
     imports: [CommonModule],
     templateUrl: './tools-used.component.html',

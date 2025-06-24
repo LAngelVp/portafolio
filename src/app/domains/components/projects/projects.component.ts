@@ -5,6 +5,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 
 
 @Component({
+  standalone: true,
     selector: 'app-projects',
     imports: [
       CommonModule, 

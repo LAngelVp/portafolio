@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkWithHref, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
+    standalone: true,
     selector: 'app-btn-llamada-acion',
     imports: [
         CommonModule

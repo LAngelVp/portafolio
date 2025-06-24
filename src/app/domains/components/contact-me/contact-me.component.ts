@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {  FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-contact-me',
   standalone: true,
+  selector: 'app-contact-me',
   imports: [
     ReactiveFormsModule,
-    FormBuilder,
-    FormGroup
+    CommonModule,
+    HttpClientModule
   ],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.css']

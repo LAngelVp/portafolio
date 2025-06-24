@@ -4,15 +4,14 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
+    standalone: true,
     selector: 'app-barra-navegacion',
     imports: [
         CommonModule,
         RouterModule,
-        RouterLink,
-        RouterOutlet
     ],
     templateUrl: './barra-navegacion.component.html',
-    styleUrl: './barra-navegacion.component.css'
+    styleUrls: ['./barra-navegacion.component.css']
 })
 export class BarraNavegacionComponent {
   img_menu : string = '../../../../assets/images/burger.svg';
@@ -32,7 +31,7 @@ export class BarraNavegacionComponent {
     },
     {
       name : 'Curso',
-      direction : '/cursos'
+      direction : '/inicio-sesion'
     },
     {
       name : 'Contacto',

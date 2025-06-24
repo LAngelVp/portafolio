@@ -3,6 +3,7 @@ import { GeneradorQRComponent } from '../generador-qr/generador-qr.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
     selector: 'app-herramientas',
     imports: [
         CommonModule

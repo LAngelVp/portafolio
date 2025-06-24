@@ -3,6 +3,7 @@ import { ProyectosModel } from '../../models/proyectos-model';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
     selector: 'app-proyectos',
     imports: [
         CommonModule

@@ -5,11 +5,11 @@ import { AboutMeComponent } from '../../components/about-me/about-me.component';
 import { ServicesBuyComponent } from '../../components/services-buy/services-buy.component';
 import { ProjectsComponent } from '../../components/projects/projects.component';
 import { SocialMediaComponent } from '../../components/social-media/social-media.component';
-import { WaveSpikesComponent } from '../../components/wave-spikes/wave-spikes.component';
 import { BarraNavegacionComponent } from '../../shared/barra-navegacion/barra-navegacion.component';
 import { RouterModule } from '@angular/router';
 
 @Component({
+    standalone: true,
     selector: 'app-home',
     imports: [
         RouterModule,

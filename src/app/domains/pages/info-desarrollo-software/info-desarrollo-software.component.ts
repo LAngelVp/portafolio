@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { BtnLlamadaAcionComponent } from '../../shared/btn-llamada-acion/btn-llamada-acion.component';
 
 @Component({
+    standalone: true,
     selector: 'app-info-desarrollo-software',
     imports: [CommonModule, BtnLlamadaAcionComponent],
     templateUrl: './info-desarrollo-software.component.html',

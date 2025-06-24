@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WaveSpikesComponent } from './wave-spikes.component';
+import { ListaUsuariosComponent } from './lista-usuarios.component';
 
-describe('WaveSpikesComponent', () => {
-  let component: WaveSpikesComponent;
-  let fixture: ComponentFixture<WaveSpikesComponent>;
+describe('ListaUsuariosComponent', () => {
+  let component: ListaUsuariosComponent;
+  let fixture: ComponentFixture<ListaUsuariosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WaveSpikesComponent]
+      imports: [ListaUsuariosComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(WaveSpikesComponent);
+
+    fixture = TestBed.createComponent(ListaUsuariosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

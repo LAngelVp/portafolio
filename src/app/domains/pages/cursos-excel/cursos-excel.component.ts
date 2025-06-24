@@ -5,6 +5,7 @@ import { CartaVideoComponent } from '../../components/carta-video/carta-video.co
 
 
 @Component({
+    standalone: true,
     selector: 'app-cursos-excel',
     imports: [
         CommonModule,

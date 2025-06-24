@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { BtnLlamadaAcionComponent } from '../../shared/btn-llamada-acion/btn-llamada-acion.component';
 
 @Component({
+    standalone: true,
     selector: 'app-info-analisis-datos',
     imports: [
         CommonModule,
