@@ -1,35 +1,37 @@
-<div class="max-w-lg mx-auto p-6 bg-white rounded shadow-md space-y-4">
-  <h2 class="text-2xl font-bold text-center">Generador de QR con Logo</h2>
+<div class="max-w-lg mx-auto p-6 bg-white/30 backdrop-blur-md rounded-lg shadow-lg space-y-4 border border-white/30">
+  <h2 class="text-2xl font-bold text-center text-gray-800">
+    Generador de QR con Logo
+  </h2>
 
   <input
     type="text"
     [(ngModel)]="url"
     placeholder="Introduce la URL"
-    class="w-full px-4 py-2 border rounded focus:outline-none focus:ring"
+    class="w-full px-4 py-2 border border-gray-300 rounded bg-white/80 backdrop-blur-sm focus:outline-none focus:ring focus:ring-blue-400"
   />
 
   <input
     type="file"
     (change)="onLogoSelected($event)"
     accept="image/*"
-    class="w-full"
+    class="w-full bg-white/80 backdrop-blur-sm border border-gray-300 rounded"
   />
 
   <button
-    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full"
+    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full backdrop-blur-sm"
     (click)="generarQR()"
   >
     Generar QR
   </button>
   <button
-  class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full"
-  (click)="exportarQR()"
-  [disabled]="!url"
->
-  Exportar como PNG
-</button>
+    class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full backdrop-blur-sm disabled:opacity-50"
+    (click)="exportarQR()"
+    [disabled]="!url"
+  >
+    Exportar como PNG
+  </button>
 
- <div class="mt-4 flex justify-center">
-  <div #qrContainer class="w-full max-w-sm aspect-square"></div>
-</div>
+  <div class="mt-4 flex justify-center">
+    <div #qrContainer class="w-full max-w-sm aspect-square rounded bg-white/70 backdrop-blur-sm shadow-inner"></div>
+  </div>
 </div>

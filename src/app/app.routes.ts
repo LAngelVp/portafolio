@@ -54,6 +54,10 @@ export const routes: Routes = [
         component: InfoAnalisisDatosComponent
     },
     {
+        path: 'herramientas',
+        component: HerramientasComponent
+    },
+    {
         path: 'p',
         component: ProyectosComponent
     },

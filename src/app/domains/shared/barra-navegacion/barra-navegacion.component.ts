@@ -34,6 +34,10 @@ export class BarraNavegacionComponent {
       direction : '/inicio-sesion'
     },
     {
+      name : 'Herramientas',
+      direction : '/herramientas'
+    },
+    {
       name : 'Contacto',
       direction : '/contact'
     },

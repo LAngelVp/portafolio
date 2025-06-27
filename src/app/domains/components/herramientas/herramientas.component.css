@@ -1,0 +1,9 @@
+.fondo_imagen {
+  background-image: url("../../../../assets/images/paisaje_herramientas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;        /* Ocupa toda la altura de la ventana */
+  width: 100vw;         /* Opcional: ocupa todo el ancho */
+  overflow-y: auto;     /* Para scroll si el contenido es mayor que la pantalla */
+}

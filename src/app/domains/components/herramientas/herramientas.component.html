@@ -1,10 +1,30 @@
-<div class="flex flex-wrap gap-5 justify-center pt-24">
-  <div *ngFor="let herramienta of lista_herramientas"
-       class="flex flex-col gap-4 max-w-52 cristal p-3">
-    <h2 class="text-xl ubuntu text-center">{{ herramienta.nombre }}</h2>
-    <cite>{{ herramienta.descripcion }}</cite>
-    <button (click)="abrir_herramienta(herramienta.componente)"
-            class="bg-blue-400 py-1 px-2 rounded hover:bg-blue-600 font-bold text-white">
+<div class="fondo_imagen pt-24 h-screen w-screen overflow-y-auto">
+  <div class="text-center mb-10">
+    <h1 class="inline-block text-3xl sm:text-4xl font-bold text-blue-700 bg-white/30 backdrop-blur-sm px-4 py-2 rounded uppercase">
+      🛠️ Herramientas utiles para agilizar tu trabajo
+    </h1>
+  </div>
+<div class="flex flex-wrap gap-5 justify-center">
+  <div
+    *ngFor="let herramienta of lista_herramientas"
+    class="group relative flex flex-col w-[220px] h-[300px] bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden p-4 hover:h-auto transition-all duration-300"
+  >
+    <h2 class="text-lg font-semibold text-center text-gray-800 mb-2 ubuntu">
+      {{ herramienta.nombre }}
+    </h2>
+
+    <p
+      class="text-sm text-gray-600 line-clamp-3 overflow-hidden text-ellipsis group-hover:line-clamp-none transition-all duration-300"
+    >
+      {{ herramienta.descripcion }}
+    </p>
+
+    <div class="flex-grow"></div>
+
+    <button
+      (click)="abrir_herramienta(herramienta.componente)"
+      class="mt-4 w-full py-2 rounded bg-blue-500 text-white font-semibold hover:bg-blue-600 transition"
+    >
       Abrir
     </button>
   </div>
@@ -13,4 +33,5 @@
 <!-- Render dinámico del componente -->
 <div class="mt-10 flex justify-center">
   <ng-container *ngIf="componente_actual" [ngComponentOutlet]="componente_actual"></ng-container>
+</div>
 </div>
