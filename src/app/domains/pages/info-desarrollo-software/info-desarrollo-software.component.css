@@ -9,7 +9,7 @@
         view-timeline-axis: block;
         animation-timeline: --image;
         animation-name: contenedor_areas_izquierda;
-        animation-range: entry 25% cover 35%;
+        animation-range: entry 5% cover 10%;
         animation-fill-mode: both;
     }
 
@@ -18,7 +18,7 @@
         view-timeline-axis: block;
         animation-timeline: --image;
         animation-name: contenedor_areas_derecha;
-        animation-range: entry 25% cover 35%;
+        animation-range: entry 5% cover 10%;
         animation-fill-mode: both;
     }
 
