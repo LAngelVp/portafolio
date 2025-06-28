@@ -29,10 +29,8 @@
 
     <div *ngIf="mostrarModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
   <div class="bg-white rounded-xl shadow-lg p-6 max-w-sm w-full text-center">
-    <h3 class="text-lg font-semibold mb-2" [ngClass]="esExito ? 'text-green-600' : 'text-red-600'">
-      {{ esExito ? 'Éxito' : 'Error' }}
-    </h3>
-    <p class="mb-4 text-gray-700">{{ mensajeModal }}</p>
+    <div class="text-lg font-semibold mb-2 whitespace-pre-line" [ngClass]="esExito ? 'text-green-600' : 'text-red-600'" [innerText]="mensajeModal">
+    </div>
     <button (click)="cerrarModal()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
       Cerrar
     </button>

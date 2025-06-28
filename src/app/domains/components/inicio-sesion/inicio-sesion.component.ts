@@ -20,6 +20,7 @@ form = this.fb.group({
 
   mostrarModal = false;
   mensajeModal = '';
+  numeroContatoModal = "2713997432"
   esExito = false;
 
   constructor(
@@ -43,7 +44,10 @@ async iniciarSesion() {
         setTimeout(() => this.router.navigate(['/cursos']), 1500);
       } else {
         this.esExito = false;
-        this.mensajeModal = 'Tu cuenta aún no ha sido activada.';
+        this.mensajeModal = 'Tu cuenta aún no ha sido activada.\n' +
+        'Comunicate al número de telefono o Whatsapp\n' +
+        `${this.numeroContatoModal}\n` +
+        'Tambien puedes comunicarte desde el apartado de contacto';
         this.mostrarModal = true;
       }
     } else {
